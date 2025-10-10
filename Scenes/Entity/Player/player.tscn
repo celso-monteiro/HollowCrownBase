@@ -61,4 +61,6 @@ fov = 72.6834
 
 [node name="LeftRay" type="RayCast3D" parent="."]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="PlayerLight" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.72549, 0.447059, 1)
+distance_fade_enabled = true
