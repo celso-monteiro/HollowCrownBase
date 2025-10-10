@@ -1,41 +1,19 @@
-# Godot 4 specific
+# ───────── Godot 4.x ─────────
 .import/
 .godot/
-*.import
+.export/
+.export-presets.cfg
+*.translation
 
-# OS junk
+# ───────── OS / Editor ─────────
 .DS_Store
 Thumbs.db
-
-# Editor backups
-*~
-*.tmp
-*.bak
-*.swp
-
-# Logs
-logs/
-*.log
-
-# Exported builds
-export/
-bin/
-*.exe
-*.app
-*.apk
-*.aab
-*.pck
-*.zip
-*.tar.gz
-
-# VSCode / JetBrains / other IDEs
 .vscode/
 .idea/
-*.code-workspace
+*.log
+*.tmp
 
-# Python venvs (if you ever use scripts/tools)
-venv/
-.env/
-
-# Dev notes (keep your markdown, ignore binaries)
-*.cherrytree
+# ───────── Build Artifacts ─────────
+*.exe
+*.zip
+*.tar.gz
