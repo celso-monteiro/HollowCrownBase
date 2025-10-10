@@ -22,4 +22,3 @@ It serves as the foundation for all levels, dungeons, and future mechanics.
 ## Folder Structure
 
 # HollowCrownBase
-

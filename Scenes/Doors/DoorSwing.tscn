@@ -11,7 +11,6 @@ albedo_texture = ExtResource("1")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lf7kp"]
 albedo_texture = ExtResource("3_quo5s")
-albedo_texture_force_srgb = true
 
 [sub_resource type="BoxShape3D" id="3"]
 size = Vector3(1, 2, 0.12)

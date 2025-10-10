@@ -237,7 +237,7 @@ environment = SubResource("1")
 transform = Transform3D(0.472514, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 
 [node name="Torch" type="AnimatedSprite3D" parent="Castle"]
-transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, -0.764642, -1.77711)
+transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, -0.952353, -1.35419)
 centered = false
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_hy1lb")
@@ -255,7 +255,6 @@ centered = false
 billboard = 1
 shaded = true
 sprite_frames = SubResource("SpriteFrames_hy1lb")
-animation = &""
 
 [node name="Torch4" type="AnimatedSprite3D" parent="Castle"]
 transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, 2.71103, 0.006, -9.47727)
