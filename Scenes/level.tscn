@@ -1,0 +1,282 @@
+[gd_scene load_steps=11 format=3 uid="uid://b723u2vmtq0rx"]
+
+[ext_resource type="Material" uid="uid://c71yladfjhgud" path="res://addons/level_block/default_material.tres" id="1"]
+[ext_resource type="Texture2D" uid="uid://cxysu7t01qmnb" path="res://assets/tileset.png" id="2"]
+[ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://dih65pt1ku1vh" path="res://Scenes/Entity/Player/player.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://co7u1qyg1tmuo" path="res://assets/Textures/texture.png" id="4_tehvc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgbr4"]
+albedo_texture = ExtResource("4_tehvc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0vi0r"]
+albedo_texture = ExtResource("4_tehvc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7llij"]
+albedo_texture = ExtResource("4_tehvc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wi8gh"]
+albedo_texture = ExtResource("4_tehvc")
+
+[sub_resource type="Environment" id="1"]
+background_mode = 1
+fog_depth_begin = 5.0
+fog_depth_end = 20.0
+
+[node name="Level" type="Node3D"]
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="LevelBlock2" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+script = ExtResource("3")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("4_tehvc")
+east_face = 186
+south_face = 186
+west_face = 186
+top_face = 5
+bottom_face = 10
+
+[node name="LevelBlock3" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2)
+script = ExtResource("3")
+material = SubResource("StandardMaterial3D_0vi0r")
+texture_sheet = ExtResource("4_tehvc")
+north_face = 1
+west_face = 0
+top_face = 5
+bottom_face = 10
+
+[node name="LevelBlock4" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+top_face = 5
+bottom_face = 10
+
+[node name="LevelBlock10" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("4_tehvc")
+texture_size = 32.0
+east_face = 0
+west_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock11" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("4_tehvc")
+east_face = 13
+west_face = 12
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock12" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 10
+west_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock23" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -8)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 6
+west_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock13" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+south_face = 10
+west_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock14" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock15" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -10)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 10
+south_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock16" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -12)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock24" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -12)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock17" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock18" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -12)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+west_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock19" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -14)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+north_face = 10
+west_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock20" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+north_face = 13
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock21" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -14)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+north_face = 10
+east_face = 10
+top_face = 10
+bottom_face = 10
+
+[node name="LevelBlock5" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+script = ExtResource("3")
+material = SubResource("StandardMaterial3D_7llij")
+texture_sheet = ExtResource("4_tehvc")
+texture_size = 32.0
+north_face = 6
+east_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock6" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 3
+top_face = 5
+bottom_face = 10
+
+[node name="LevelBlock7" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 0
+south_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock22" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+east_face = 0
+south_face = 0
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock8" type="Node3D" parent="Blocks"]
+script = ExtResource("3")
+material = ExtResource("1")
+texture_sheet = ExtResource("2")
+texture_size = 32.0
+south_face = 6
+top_face = 5
+bottom_face = 4
+
+[node name="LevelBlock9" type="Node3D" parent="Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+script = ExtResource("3")
+material = SubResource("StandardMaterial3D_wi8gh")
+texture_sheet = ExtResource("4_tehvc")
+east_face = 187
+south_face = 0
+west_face = 186
+top_face = 5
+bottom_face = 123
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+light_color = Color(0.93, 0.837, 0.7905, 1)
+omni_range = 10.0
+
+[node name="OmniLight2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+light_color = Color(0.93, 0.837, 0.7905, 1)
+omni_range = 10.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("1")
+
+[node name="Player" parent="." instance=ExtResource("4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)

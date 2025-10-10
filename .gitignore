@@ -1,0 +1,41 @@
+# Godot 4 specific
+.import/
+.godot/
+*.import
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
+*.tmp
+*.bak
+*.swp
+
+# Logs
+logs/
+*.log
+
+# Exported builds
+export/
+bin/
+*.exe
+*.app
+*.apk
+*.aab
+*.pck
+*.zip
+*.tar.gz
+
+# VSCode / JetBrains / other IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Python venvs (if you ever use scripts/tools)
+venv/
+.env/
+
+# Dev notes (keep your markdown, ignore binaries)
+*.cherrytree

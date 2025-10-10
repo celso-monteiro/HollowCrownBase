@@ -1,0 +1,5 @@
+Code: Vader, Ghastly (ZScript conversion)
+Sounds: Id Software, Vader
+Sprites: Id Software
+Sprite Edit: Vader
+Idea Base: Nanami

@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://dfpg12hemf2k3"]
+
+[ext_resource type="Texture2D" uid="uid://bts2eev1mg8j" path="res://assets/Sprites/Menu/Inventory/inventory.png" id="1_8vrkd"]
+[ext_resource type="Script" path="res://Scenes/Inventory/inventory_ui.gd" id="1_se3fm"]
+[ext_resource type="PackedScene" uid="uid://b43g3khfjxvr2" path="res://Scenes/Menu/blur_overlay.tscn" id="3_u6va0"]
+[ext_resource type="Texture2D" uid="uid://8su3rc5dmnlj" path="res://assets/Sprites/Menu/Inventory/item_slot_idle.png" id="4_fs7ow"]
+[ext_resource type="Texture2D" uid="uid://du2ef1ml0smsf" path="res://assets/Sprites/Menu/Inventory/item_slot_selected.png" id="5_s4u12"]
+[ext_resource type="Script" path="res://Scenes/Inventory/ItemSlot.gd" id="6_0vdre"]
+[ext_resource type="Texture2D" uid="uid://b0uoc3k0872o0" path="res://assets/Sprites/Menu/Inventory/slot.png" id="7_jipu7"]
+[ext_resource type="FontFile" uid="uid://br556jgmlh4wj" path="res://assets/Fonts/BlackCastleMF.ttf" id="7_q84qk"]
+[ext_resource type="Texture2D" uid="uid://b7aacwwk761w0" path="res://assets/Sprites/Items/silver_shield.png" id="7_xqmu5"]
+
+[node name="Inventory_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_se3fm")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 48.0
+offset_right = 344.0
+offset_bottom = 384.0
+texture = ExtResource("1_8vrkd")
+expand_mode = 1
+
+[node name="BlurOverlay" parent="." instance=ExtResource("3_u6va0")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 360.0
+offset_bottom = 480.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 328.0
+offset_bottom = 248.0
+
+[node name="SlotsContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemSlot" type="TextureButton" parent="SlotsContainer"]
+z_index = 2
+texture_filter = 1
+layout_mode = 0
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 120.0
+offset_bottom = 152.0
+scale = Vector2(0.5, 0.5)
+toggle_mode = true
+texture_normal = ExtResource("4_fs7ow")
+texture_pressed = ExtResource("5_s4u12")
+stretch_mode = 0
+script = ExtResource("6_0vdre")
+
+[node name="ItemSprite" type="Sprite2D" parent="SlotsContainer/ItemSlot"]
+texture_filter = 1
+position = Vector2(40, 38)
+scale = Vector2(2, 2)
+texture = ExtResource("7_xqmu5")
+
+[node name="Quantity" type="Label" parent="SlotsContainer/ItemSlot"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 48.0
+offset_right = 82.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_q84qk")
+theme_override_font_sizes/font_size = 22
+text = "11"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuantitySlot" type="Sprite2D" parent="SlotsContainer/ItemSlot"]
+visible = false
+texture_filter = 1
+position = Vector2(64, 64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_jipu7")

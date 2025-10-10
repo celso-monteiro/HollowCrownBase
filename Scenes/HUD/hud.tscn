@@ -1,0 +1,224 @@
+[gd_scene load_steps=18 format=3 uid="uid://dccdlxfv2uno6"]
+
+[ext_resource type="Script" path="res://Scenes/HUD/hud.gd" id="1_cg6ef"]
+[ext_resource type="Texture2D" uid="uid://bruut67s61ouq" path="res://assets/Sprites/HUD/heretic_hud - original.png" id="2_q0id5"]
+[ext_resource type="Texture2D" uid="uid://dphdkuaahixuf" path="res://assets/Sprites/HUD/wand_icon.png" id="5_i7mli"]
+[ext_resource type="Texture2D" uid="uid://psv7tb206v13" path="res://assets/Sprites/HUD/sword_icon.png" id="6_g8630"]
+[ext_resource type="Texture2D" uid="uid://ncx3eistyx88" path="res://assets/Sprites/Weapons/Wand/wand_ammo.png" id="6_s02v7"]
+[ext_resource type="Texture2D" uid="uid://pqgbp1v7ycyr" path="res://assets/Sprites/HUD/blue.png" id="7_arfvj"]
+[ext_resource type="FontFile" uid="uid://br556jgmlh4wj" path="res://assets/Fonts/BlackCastleMF.ttf" id="8_ogiuy"]
+[ext_resource type="Texture2D" uid="uid://c4g5go1el42d6" path="res://assets/Sprites/HUD/red.png" id="8_xicnq"]
+[ext_resource type="Texture2D" uid="uid://c7litpqut2vvf" path="res://assets/Sprites/HUD/yellow.png" id="9_e30pe"]
+[ext_resource type="Texture2D" uid="uid://crh8wud12iab" path="res://assets/Sprites/Items/treasure_01.png" id="10_aaux8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8p3nm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_s02v7")
+}],
+"loop": true,
+"name": &"wand",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_tkm75"]
+resource_name = "100_health"
+length = 0.1
+
+[sub_resource type="Animation" id="Animation_66iw8"]
+resource_name = "25_health"
+length = 0.1
+
+[sub_resource type="Animation" id="Animation_hm84v"]
+resource_name = "50_health"
+length = 0.1
+
+[sub_resource type="Animation" id="Animation_0q5ri"]
+resource_name = "75_health"
+length = 0.1
+
+[sub_resource type="Animation" id="Animation_svq53"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2eek7"]
+_data = {
+"100_health": SubResource("Animation_tkm75"),
+"25_health": SubResource("Animation_66iw8"),
+"50_health": SubResource("Animation_hm84v"),
+"75_health": SubResource("Animation_0q5ri"),
+"RESET": SubResource("Animation_svq53")
+}
+
+[node name="HUD" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_cg6ef")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StatusBar" type="Control" parent="Control"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="StatusBar" type="Sprite2D" parent="Control/StatusBar"]
+texture_filter = 1
+position = Vector2(240, 311.612)
+scale = Vector2(0.375, 0.457808)
+texture = ExtResource("2_q0id5")
+
+[node name="AmmoIcon" type="AnimatedSprite2D" parent="Control/StatusBar"]
+texture_filter = 1
+position = Vector2(180, 319)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_8p3nm")
+animation = &"wand"
+
+[node name="HealthLabel" type="Label" parent="Control/StatusBar"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 91.0
+offset_top = 304.0
+offset_right = 131.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(0.764706, 0.592157, 0.231373, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("8_ogiuy")
+theme_override_font_sizes/font_size = 17
+text = "65"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 128
+
+[node name="AmmoLabel" type="Label" parent="Control/StatusBar"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 166.0
+offset_top = 287.0
+offset_right = 198.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0.764706, 0.592157, 0.231373, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_ogiuy")
+theme_override_font_sizes/font_size = 17
+text = "47"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 128
+
+[node name="ArmorLabel" type="Label" parent="Control/StatusBar"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 342.0
+offset_top = 304.0
+offset_right = 382.0
+offset_bottom = 328.0
+theme_override_colors/font_color = Color(0.764706, 0.592157, 0.231373, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("8_ogiuy")
+theme_override_font_sizes/font_size = 17
+text = "98"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 128
+
+[node name="WandIcon" type="Sprite2D" parent="Control/StatusBar"]
+texture_filter = 1
+position = Vector2(288, 312)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("5_i7mli")
+
+[node name="SwordIcon" type="Sprite2D" parent="Control/StatusBar"]
+visible = false
+texture_filter = 1
+position = Vector2(288, 312)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("6_g8630")
+
+[node name="BlueSlot" type="Sprite2D" parent="Control/StatusBar"]
+visible = false
+position = Vector2(237, 299)
+scale = Vector2(0.6, 0.55)
+texture = ExtResource("7_arfvj")
+
+[node name="RedSlot" type="Sprite2D" parent="Control/StatusBar"]
+visible = false
+position = Vector2(237, 313)
+scale = Vector2(0.6, 0.55)
+texture = ExtResource("8_xicnq")
+
+[node name="YellowSlot" type="Sprite2D" parent="Control/StatusBar"]
+visible = false
+position = Vector2(237, 328)
+scale = Vector2(0.6, 0.55)
+texture = ExtResource("9_e30pe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+libraries = {
+"": SubResource("AnimationLibrary_2eek7")
+}
+
+[node name="TopBar" type="ColorRect" parent="Control"]
+modulate = Color(1, 1, 1, 0.372549)
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 32.0
+color = Color(0, 0, 0, 1)
+
+[node name="InfoLabel" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 480.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("8_ogiuy")
+theme_override_font_sizes/font_size = 18
+text = "Enemy attacks"
+vertical_alignment = 1
+
+[node name="TimeElapsed" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 408.0
+offset_right = 472.0
+offset_bottom = 32.0
+theme_override_fonts/font = ExtResource("8_ogiuy")
+theme_override_font_sizes/font_size = 18
+text = "00:00"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="GoldLabel" type="Label" parent="Control"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 348.5
+offset_top = 4.0
+offset_right = 388.5
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.980392, 0.988235, 0.0705882, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("8_ogiuy")
+theme_override_font_sizes/font_size = 18
+text = "250"
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 128
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+texture_filter = 1
+position = Vector2(344.5, 16)
+texture = ExtResource("10_aaux8")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxtfndjngv4jf"]
+
+[ext_resource type="Script" path="res://addons/level_block/texture_selector_scene.gd" id="1_ihaj1"]
+[ext_resource type="Texture2D" uid="uid://da5akf336dc8" path="res://addons/level_block/clear.svg" id="2_r6kjh"]
+
+[node name="TextureSelector" type="VBoxContainer"]
+offset_right = 195.0
+offset_bottom = 130.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_ihaj1")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+texture_filter = 1
+texture_repeat = 2
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+columns = 16
+
+[node name="Popup" type="AcceptDialog" parent="."]
+position = Vector2i(0, 24)
+size = Vector2i(800, 800)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup"]
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 791.0
+offset_bottom = 749.0
+
+[node name="GridContainer" type="GridContainer" parent="Popup/ScrollContainer"]
+layout_mode = 2
+columns = 16
+
+[node name="FaceLabel" type="Label" parent="."]
+layout_mode = 2
+
+[node name="Row" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Row"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("2_r6kjh")
+expand_mode = 1
+
+[node name="SpinBox" type="SpinBox" parent="Row"]
+layout_mode = 2
+size_flags_vertical = 4
+min_value = -1.0
+max_value = 255.0
+rounded = true
+allow_greater = true
+
+[node name="PickButton" type="Button" parent="Row"]
+layout_mode = 2
+text = "Pick"
+flat = true

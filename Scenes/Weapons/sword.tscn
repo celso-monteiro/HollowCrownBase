@@ -1,0 +1,263 @@
+[gd_scene load_steps=16 format=3 uid="uid://cjp25u4hdvqbu"]
+
+[ext_resource type="Script" path="res://Scenes/Weapons/sword.gd" id="1_1sw2a"]
+[ext_resource type="Texture2D" uid="uid://y0l0mxht37ey" path="res://Assets/Sprites/Weapons/Sword/sword_0.png" id="2_3p5os"]
+[ext_resource type="Texture2D" uid="uid://p4r7y8tju0ha" path="res://Assets/Sprites/Weapons/Sword/sword_1.png" id="3_etq63"]
+[ext_resource type="Texture2D" uid="uid://d18pn5hjpxvgx" path="res://Assets/Sprites/Weapons/Sword/sword_2.png" id="4_44745"]
+[ext_resource type="Texture2D" uid="uid://b2r6um4lj4cdh" path="res://Assets/Sprites/Weapons/Sword/sword_3.png" id="5_6asww"]
+[ext_resource type="Texture2D" uid="uid://d35pmsda3g6hp" path="res://Assets/Sprites/Weapons/Sword/sword_4.png" id="6_8ocj6"]
+[ext_resource type="Texture2D" uid="uid://dfgk0lajh26vd" path="res://Assets/Sprites/Weapons/Sword/sword_5.png" id="7_l2ftn"]
+[ext_resource type="Texture2D" uid="uid://cy3l6tledctgc" path="res://Assets/Sprites/Weapons/Sword/sword_6.png" id="8_1kvfr"]
+[ext_resource type="Texture2D" uid="uid://bnl4yte7mjcxo" path="res://Assets/Sprites/Weapons/Sword/sword_7.png" id="9_e6s37"]
+
+[sub_resource type="Animation" id="Animation_xnweh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(41, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_4quab"]
+resource_name = "idle"
+length = 0.45
+loop_mode = 1
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(240, 152)]
+}
+
+[sub_resource type="Animation" id="Animation_dx386"]
+resource_name = "off"
+length = 0.45
+step = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(240, 152), Vector2(240, 208), Vector2(240, 288)]
+}
+
+[sub_resource type="Animation" id="Animation_cbkwb"]
+resource_name = "shoot"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"shoot"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Control/AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(240, 152), Vector2(240, 152), Vector2(240, 152), Vector2(240, 152), Vector2(240, 144)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s1lu5"]
+_data = {
+"RESET": SubResource("Animation_xnweh"),
+"idle": SubResource("Animation_4quab"),
+"off": SubResource("Animation_dx386"),
+"shoot": SubResource("Animation_cbkwb")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8bh8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3p5os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_etq63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_44745")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3p5os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_etq63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_44745")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6asww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8ocj6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_l2ftn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1kvfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_e6s37")
+}],
+"loop": true,
+"name": &"shoot",
+"speed": 5.0
+}]
+
+[node name="Sword" type="Node3D"]
+script = ExtResource("1_1sw2a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_s1lu5")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control"]
+texture_filter = 1
+position = Vector2(41, 200)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_8bh8q")
+animation = &"idle"
+
+[node name="GunRays" type="Node3D" parent="."]
+
+[node name="RayCast3D" type="RayCast3D" parent="GunRays"]
+target_position = Vector3(0, 0, -2)
+collision_mask = 4
+collide_with_areas = true
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[connection signal="animation_finished" from="CanvasLayer/Control/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

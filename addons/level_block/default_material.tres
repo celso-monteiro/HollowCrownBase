@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c71yladfjhgud"]
+
+[ext_resource type="Texture2D" uid="uid://cxysu7t01qmnb" path="res://Assets/Textures/tileset.png" id="1_upjvc"]
+
+[resource]
+specular_mode = 2
+albedo_texture = ExtResource("1_upjvc")
+metallic_specular = 0.0
+texture_filter = 0

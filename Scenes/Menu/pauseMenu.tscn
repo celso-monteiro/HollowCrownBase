@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://csj2jphvnpgrf"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/pauseMenu.gd" id="1_62njc"]
+[ext_resource type="PackedScene" uid="uid://b43g3khfjxvr2" path="res://Scenes/Menu/blur_overlay.tscn" id="2_xyyvq"]
+[ext_resource type="Texture2D" uid="uid://cyj5sjhpwvy1i" path="res://assets/Sprites/Menu/Dungeon-Crawler-6-5-2024.png" id="4_pw33f"]
+[ext_resource type="PackedScene" uid="uid://c245agea7ksht" path="res://Scenes/Menu/menu_button.tscn" id="5_qwg6n"]
+
+[sub_resource type="Animation" id="Animation_fkvh2"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_1cj1q"]
+resource_name = "skull"
+loop_mode = 1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_piwwt"]
+_data = {
+"RESET": SubResource("Animation_fkvh2"),
+"skull": SubResource("Animation_1cj1q")
+}
+
+[node name="PauseMenu" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_62njc")
+
+[node name="Control" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+
+[node name="BlurOverlay" parent="Control" instance=ExtResource("2_xyyvq")]
+layout_mode = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="Control"]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 128.0
+
+[node name="Title" type="Sprite2D" parent="Control/CenterContainer"]
+z_index = 1
+texture_filter = 1
+position = Vector2(252, 54)
+scale = Vector2(0.414063, 0.404494)
+texture = ExtResource("4_pw33f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 104.0
+offset_right = 448.0
+offset_bottom = 320.0
+
+[node name="ContinueBtn" parent="Control/VBoxContainer" instance=ExtResource("5_qwg6n")]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../NewGameBtn")
+text = "CONTINUE"
+arrow_margin_from_center = 180
+
+[node name="NewGameBtn" parent="Control/VBoxContainer" instance=ExtResource("5_qwg6n")]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+focus_neighbor_top = NodePath("../ContinueBtn")
+focus_neighbor_bottom = NodePath("../LoadBtn")
+text = "NEW GAME"
+arrow_margin_from_center = 180
+
+[node name="LoadBtn" parent="Control/VBoxContainer" instance=ExtResource("5_qwg6n")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../NewGameBtn")
+focus_neighbor_bottom = NodePath("../ConfigBtn")
+text = "LOAD GAME"
+arrow_margin_from_center = 180
+
+[node name="ConfigBtn" parent="Control/VBoxContainer" instance=ExtResource("5_qwg6n")]
+layout_mode = 2
+focus_neighbor_top = NodePath("../LoadBtn")
+focus_neighbor_bottom = NodePath("../QuitBtn")
+text = "CONFIG"
+arrow_margin_from_center = 180
+
+[node name="QuitBtn" parent="Control/VBoxContainer" instance=ExtResource("5_qwg6n")]
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+focus_neighbor_top = NodePath("../ConfigBtn")
+text = "QUIT"
+arrow_margin_from_center = 180
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_piwwt")
+}
+autoplay = "skull"
+
+[node name="BtnSnd" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="Control/VBoxContainer/ContinueBtn" to="." method="_on_continue_btn_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/NewGameBtn" to="." method="_on_new_game_btn_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/LoadBtn" to="." method="_on_load_btn_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/ConfigBtn" to="." method="_on_config_btn_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/QuitBtn" to="." method="_on_quit_btn_pressed"]

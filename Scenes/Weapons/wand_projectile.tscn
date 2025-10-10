@@ -1,0 +1,170 @@
+[gd_scene load_steps=13 format=3 uid="uid://bhchyldjbg1jc"]
+
+[ext_resource type="Script" path="res://Scenes/Weapons/wand_projectile.gd" id="1_0idjq"]
+[ext_resource type="Texture2D" uid="uid://dnef51u67sg8e" path="res://Assets/Sprites/Weapons/Wand/wand_projectile_0.png" id="2_vhd2f"]
+[ext_resource type="Texture2D" uid="uid://d137ybvol65iq" path="res://Assets/Sprites/Weapons/Wand/wand_projectile_1.png" id="3_g6mtq"]
+[ext_resource type="Texture2D" uid="uid://ctwihh8gguqmp" path="res://Assets/Sprites/Weapons/Wand/wand_projectile_2.png" id="4_pxgyn"]
+[ext_resource type="Texture2D" uid="uid://csfmgy3hyemfx" path="res://Assets/Sprites/Weapons/Wand/wand_projectile_3.png" id="5_ni28n"]
+[ext_resource type="Texture2D" uid="uid://cf6un8od0a8gm" path="res://Assets/Sprites/Weapons/Wand/wand_projectile_4.png" id="6_tbg1l"]
+
+[sub_resource type="Animation" id="Animation_i7dml"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"explode"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ujpy1"]
+resource_name = "explode"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"explode"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_o72dp"]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_060q0"]
+_data = {
+"RESET": SubResource("Animation_i7dml"),
+"explode": SubResource("Animation_ujpy1"),
+"idle": SubResource("Animation_o72dp")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_n6p68"]
+radius = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5ul5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vhd2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g6mtq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pxgyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ni28n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tbg1l")
+}],
+"loop": true,
+"name": &"explode",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vhd2f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="WandProjectile" type="Area3D" groups=["player_projectiles"]]
+collision_layer = 16
+collision_mask = 37
+script = ExtResource("1_0idjq")
+projectile_speed = 5
+projectile_damage = 15
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_060q0")
+}
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_n6p68")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+modulate = Color(1.5, 1.3, 0, 1)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_q5ul5")
+animation = &"explode"
+
+[node name="Explode_snd" type="AudioStreamPlayer2D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.752941, 0.235294, 1)
+shadow_enabled = true
+omni_range = 1.5
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -1)
+collision_mask = 37
+collide_with_areas = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,88 @@
+[gd_scene load_steps=10 format=3 uid="uid://b1mcgusailpn6"]
+
+[ext_resource type="Script" path="res://Scenes/Menu/ColorRect.gd" id="1_bqyv0"]
+[ext_resource type="Shader" path="res://Scenes/Menu/melt.gdshader" id="1_o0g50"]
+[ext_resource type="Texture2D" uid="uid://b5he81c05hn43" path="res://Assets/Sprites/Menu/MenuScreen.png" id="2_8yvwk"]
+[ext_resource type="Texture2D" uid="uid://cyj5sjhpwvy1i" path="res://Assets/Sprites/Menu/Dungeon-Crawler-6-5-2024.png" id="5_a7e36"]
+[ext_resource type="FontFile" uid="uid://br556jgmlh4wj" path="res://Assets/Fonts/BlackCastleMF.ttf" id="6_x2mpe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d2wko"]
+shader = ExtResource("1_o0g50")
+shader_parameter/timer = 0.0
+shader_parameter/y_offsets = PackedFloat32Array()
+shader_parameter/melting = false
+shader_parameter/melt_tex = ExtResource("2_8yvwk")
+
+[sub_resource type="Animation" id="Animation_m0iyv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect/PressStart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_kw2fv"]
+resource_name = "blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect/PressStart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2nqqr"]
+_data = {
+"RESET": SubResource("Animation_m0iyv"),
+"blink": SubResource("Animation_kw2fv")
+}
+
+[node name="MeltScreen" type="CanvasLayer"]
+layer = 4
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_d2wko")
+offset_right = 480.0
+offset_bottom = 360.0
+texture = ExtResource("2_8yvwk")
+script = ExtResource("1_bqyv0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_2nqqr")
+}
+autoplay = "blink"
+
+[node name="PressStart" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 304.0
+offset_right = 424.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("6_x2mpe")
+theme_override_font_sizes/font_size = 30
+text = "Press Start"
+horizontal_alignment = 1
+
+[node name="Logo" type="Sprite2D" parent="TextureRect"]
+position = Vector2(240, 51.375)
+scale = Vector2(0.46875, 0.384831)
+texture = ExtResource("5_a7e36")

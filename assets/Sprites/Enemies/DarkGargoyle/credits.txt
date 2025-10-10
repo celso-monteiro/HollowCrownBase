@@ -1,0 +1,10 @@
+Submitted: Virtue
+Decorate: Virtue
+Sounds: Raven Software, Id Software
+Sprites: Raven Software, Id Software
+Sprite Edit: HereticImp, recoloured by Virtue
+Idea Base: A stronger gargoyle
+
+Description: 
+The inbetween of the lowly Gargoyle and the Hexen Ifrit, these more menacing imps toss 3 balls of fire, and sometimes throw a more powerful 
+variant. Dangerous up close too as they claw with both hands.

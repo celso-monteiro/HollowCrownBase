@@ -1,0 +1,172 @@
+[gd_scene load_steps=7 format=3 uid="uid://o470d81rklpa"]
+
+[ext_resource type="Texture2D" uid="uid://dyoe3my2323ed" path="res://Assets/Sprites/Menu/black_overlay.png" id="1_8cnaj"]
+[ext_resource type="Script" path="res://Scenes/HUD/statsScreen.gd" id="1_8wlsl"]
+[ext_resource type="Shader" path="res://Scenes/Shaders/blur.gdshader" id="1_rcova"]
+[ext_resource type="Texture2D" uid="uid://b5he81c05hn43" path="res://Assets/Sprites/Menu/MenuScreen.png" id="2_anb0g"]
+[ext_resource type="FontFile" uid="uid://br556jgmlh4wj" path="res://Assets/Fonts/BlackCastleMF.ttf" id="8_87vky"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gx3qq"]
+shader = ExtResource("1_rcova")
+shader_parameter/blur = 0.376
+shader_parameter/brightness = 0.0
+
+[node name="StatsScreen" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_8wlsl")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_anb0g")
+
+[node name="BlurOverlay" type="TextureRect" parent="Control"]
+visible = false
+material = SubResource("ShaderMaterial_gx3qq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8cnaj")
+
+[node name="Title" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 424.0
+offset_bottom = 76.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 40
+text = "THE DUNGEONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Finished" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 107.0
+offset_right = 416.0
+offset_bottom = 159.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 45
+text = "Finished !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KillsAmount" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 160.0
+offset_right = 360.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "0 %"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ItemsAmount" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 208.0
+offset_right = 360.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "0 %"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="SecretsAmount" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 256.0
+offset_right = 360.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "0 %"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TimeElapsed" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 304.0
+offset_right = 360.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "0:00"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Kills" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 160.0
+offset_right = 208.0
+offset_bottom = 191.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "Kills"
+vertical_alignment = 1
+
+[node name="Items" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 208.0
+offset_right = 208.0
+offset_bottom = 239.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "Items"
+vertical_alignment = 1
+
+[node name="Secrets" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 256.0
+offset_right = 208.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "Secrets"
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 304.0
+offset_right = 208.0
+offset_bottom = 335.0
+theme_override_colors/font_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/font = ExtResource("8_87vky")
+theme_override_font_sizes/font_size = 26
+text = "Time"
+vertical_alignment = 1
