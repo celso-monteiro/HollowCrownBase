@@ -86,6 +86,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
+west_face = 8
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock14" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
 south_face = 5
 west_face = 8
 top_face = 50
