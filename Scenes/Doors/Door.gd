@@ -18,6 +18,8 @@ var _closed_rot_y: float
 var _open_rot_y: float
 var _colliders: Array[CollisionShape3D] = []
 
+
+		
 func _ready() -> void:
 	# Ensure group
 	if not is_in_group("doors"):
@@ -87,6 +89,9 @@ func _play_motion(is_opening: bool) -> void:
 
 	t.finished.connect(func ():
 		_apply_open_state(is_opening, false)
+		#_snap_to_grid()
+		#_update_direction()
+		_update_compass()
 	)
 
 

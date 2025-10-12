@@ -25,6 +25,27 @@ func _ready() -> void:
 	_snap_to_grid()
 	_update_direction()
 
+func _update_compass():
+	var f := -global_transform.basis.z.normalized()
+	var dirs = {
+		"N": Vector3(0,0,-1),
+		"E": Vector3(1,0, 0),
+		"S": Vector3(0,0, 1),
+		"W": Vector3(-1,0,0),
+	}
+	var best := "N"
+	var best_dot := -INF
+	for k in dirs.keys():
+		var d = f.dot(dirs[k])
+		if d > best_dot:
+			best_dot = d
+			best = k
+	
+	#var hud := get_tree().root.get_node_or_null("HUD") # adjust path!
+	var hud := get_tree().root.find_child("HUD", true, false)
+	if hud and hud.has_method("set_compass"):
+		hud.set_compass(best)
+		
 func _physics_process(_delta: float) -> void:
 	# Determine movement intent based on held keys (priority order avoids diagonals)
 	var intent := ""
@@ -171,6 +192,7 @@ func _turn(angle_deg: float) -> void:
 		is_busy = false
 		_snap_to_grid()
 		_update_direction()
+		_update_compass()
 	)
 
 func _update_direction() -> void:

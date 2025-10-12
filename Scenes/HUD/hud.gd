@@ -6,12 +6,16 @@ extends CanvasLayer
 @onready var info_label = $Control/InfoLabel
 @onready var time_label = $Control/TimeElapsed
 @onready var gold = $Control/GoldLabel
+@onready var compass: Label = $"Control/TopBar/CompassLabel"  # adjust exact path
+
 
 var time_elapsed = 0.0
 var minutes
 var seconds
 var time_string
 
+func set_compass(cardinal: String) -> void:
+	compass.text = cardinal
 
 func _ready():
 	info_label.text = ""

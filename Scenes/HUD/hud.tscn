@@ -170,10 +170,20 @@ libraries = {
 
 [node name="TopBar" type="ColorRect" parent="Control"]
 modulate = Color(1, 1, 1, 0.372549)
-layout_mode = 0
-offset_right = 480.0
-offset_bottom = 32.0
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.417
+anchor_bottom = 0.089
+offset_left = 136.0
+offset_right = 279.84
+offset_bottom = -0.0400009
 color = Color(0, 0, 0, 1)
+
+[node name="CompassLabel" type="Label" parent="Control/TopBar"]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 26.0
+text = "N"
 
 [node name="InfoLabel" type="Label" parent="Control"]
 layout_mode = 0
