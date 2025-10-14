@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpedqbha5di3q"
-path="res://.godot/imported/mansion_night.png-1ac5529cdbfe4008be7a04ad822fd83b.ctex"
+path="res://.godot/imported/mansion_night.png-7a414c5122abf13ec06b1d54b7e10c11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/prologue/mansion_night.png"
-dest_files=["res://.godot/imported/mansion_night.png-1ac5529cdbfe4008be7a04ad822fd83b.ctex"]
+source_file="res://Assets/Textures/prologue/mansion_night.png"
+dest_files=["res://.godot/imported/mansion_night.png-7a414c5122abf13ec06b1d54b7e10c11.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://khrnomeaumeu"
-path="res://.godot/imported/PLRDTH.WAV-5f0b58bfd6febb9635739aa5fa813318.sample"
+path="res://.godot/imported/PLRDTH.WAV-a606835f45066c3a1cfc8f8022747346.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/SFX/PLRDTH.WAV"
-dest_files=["res://.godot/imported/PLRDTH.WAV-5f0b58bfd6febb9635739aa5fa813318.sample"]
+source_file="res://Assets/Sounds/SFX/PLRDTH.WAV"
+dest_files=["res://.godot/imported/PLRDTH.WAV-a606835f45066c3a1cfc8f8022747346.sample"]
 
 [params]
 

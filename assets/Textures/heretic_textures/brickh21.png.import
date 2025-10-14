@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cydkmnkc23jjx"
-path="res://.godot/imported/brickh21.png-d1de79c0b56de589edb01d24070aef69.ctex"
+path="res://.godot/imported/brickh21.png-4beb79bf48672058a1741b8465e31814.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/brickh21.png"
-dest_files=["res://.godot/imported/brickh21.png-d1de79c0b56de589edb01d24070aef69.ctex"]
+source_file="res://Assets/Textures/heretic_textures/brickh21.png"
+dest_files=["res://.godot/imported/brickh21.png-4beb79bf48672058a1741b8465e31814.ctex"]
 
 [params]
 

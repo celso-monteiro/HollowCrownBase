@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qurvo18dit0"
-path="res://.godot/imported/FLOOR25.png-57eef65a2501f9566155c08f6324607a.ctex"
+path="res://.godot/imported/FLOOR25.png-740fcb84df5b1cb235a3e785aa5d2035.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/FLOOR25.png"
-dest_files=["res://.godot/imported/FLOOR25.png-57eef65a2501f9566155c08f6324607a.ctex"]
+source_file="res://Assets/Textures/heretic_textures/FLOOR25.png"
+dest_files=["res://.godot/imported/FLOOR25.png-740fcb84df5b1cb235a3e785aa5d2035.ctex"]
 
 [params]
 

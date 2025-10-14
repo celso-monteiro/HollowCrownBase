@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://mmlwoat6jwgn"]
 
 [ext_resource type="Script" path="res://Scenes/Doors/simple_door.gd" id="1_eomb3"]
-[ext_resource type="Texture2D" uid="uid://cqckj87cjwbf2" path="res://assets/Textures/Doors/doorbig0.png" id="1_j8gis"]
-[ext_resource type="AudioStream" uid="uid://qsqqpe7jr3o3" path="res://assets/Sounds/SFX/DOROPN.WAV" id="3_3cjke"]
+[ext_resource type="Texture2D" uid="uid://cqckj87cjwbf2" path="res://Assets/Textures/Doors/doorbig0.png" id="1_j8gis"]
+[ext_resource type="AudioStream" uid="uid://qsqqpe7jr3o3" path="res://Assets/Sounds/SFX/DOROPN.WAV" id="3_3cjke"]
 
 [sub_resource type="Animation" id="Animation_5si70"]
 length = 0.001

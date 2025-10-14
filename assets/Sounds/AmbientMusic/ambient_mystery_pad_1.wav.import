@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cqf8tmwpvcgek"
-path="res://.godot/imported/ambient_mystery_pad_1.wav-6c00133ff89e224ba4a7c07a6e080a40.sample"
+path="res://.godot/imported/ambient_mystery_pad_1.wav-cab5b790788c3231b4a6a2686b469123.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/AmbientMusic/ambient_mystery_pad_1.wav"
-dest_files=["res://.godot/imported/ambient_mystery_pad_1.wav-6c00133ff89e224ba4a7c07a6e080a40.sample"]
+source_file="res://Assets/Sounds/AmbientMusic/ambient_mystery_pad_1.wav"
+dest_files=["res://.godot/imported/ambient_mystery_pad_1.wav-cab5b790788c3231b4a6a2686b469123.sample"]
 
 [params]
 

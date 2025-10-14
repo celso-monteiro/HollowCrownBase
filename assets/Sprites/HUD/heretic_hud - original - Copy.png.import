@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bcw1cxohelvu8"
-path="res://.godot/imported/heretic_hud - original - Copy.png-b86f967a64641e8db6c6797055e70cc7.ctex"
+path="res://.godot/imported/heretic_hud - original - Copy.png-13b0c0f9696b72a6bfcf4849e6317971.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/HUD/heretic_hud - original - Copy.png"
-dest_files=["res://.godot/imported/heretic_hud - original - Copy.png-b86f967a64641e8db6c6797055e70cc7.ctex"]
+source_file="res://Assets/Sprites/HUD/heretic_hud - original - Copy.png"
+dest_files=["res://.godot/imported/heretic_hud - original - Copy.png-13b0c0f9696b72a6bfcf4849e6317971.ctex"]
 
 [params]
 

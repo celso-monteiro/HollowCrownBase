@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b1uso521gqvlx"
-path="res://.godot/imported/EBGaramond-SemiBold.ttf-bb1c11e2a0a2f65749c7da6694685138.fontdata"
+path="res://.godot/imported/EBGaramond-SemiBold.ttf-8a91ef57fff3c59d99ad2df78bd3909a.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/static/EBGaramond-SemiBold.ttf"
-dest_files=["res://.godot/imported/EBGaramond-SemiBold.ttf-bb1c11e2a0a2f65749c7da6694685138.fontdata"]
+source_file="res://Assets/Fonts/static/EBGaramond-SemiBold.ttf"
+dest_files=["res://.godot/imported/EBGaramond-SemiBold.ttf-8a91ef57fff3c59d99ad2df78bd3909a.fontdata"]
 
 [params]
 

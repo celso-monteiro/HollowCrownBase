@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bp8c34qpubgtr"
-path="res://.godot/imported/styrq3f7.png-7d0b122b54ce39f0b2198565d10afe8f.ctex"
+path="res://.godot/imported/styrq3f7.png-19f39e4606aa0c68cebde5e2257ed578.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Enemies/Satyr/SPRITES/8dir/styrq3f7.png"
-dest_files=["res://.godot/imported/styrq3f7.png-7d0b122b54ce39f0b2198565d10afe8f.ctex"]
+source_file="res://Assets/Sprites/Enemies/Satyr/SPRITES/8dir/styrq3f7.png"
+dest_files=["res://.godot/imported/styrq3f7.png-19f39e4606aa0c68cebde5e2257ed578.ctex"]
 
 [params]
 

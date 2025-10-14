@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bt27gefknjtwu"
-path="res://.godot/imported/EBGaramond-ExtraBold.ttf-14da8159ea910e4e133d7ce2f4a34a9a.fontdata"
+path="res://.godot/imported/EBGaramond-ExtraBold.ttf-5679a07bb2b3f759ec45e9352056959c.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/static/EBGaramond-ExtraBold.ttf"
-dest_files=["res://.godot/imported/EBGaramond-ExtraBold.ttf-14da8159ea910e4e133d7ce2f4a34a9a.fontdata"]
+source_file="res://Assets/Fonts/static/EBGaramond-ExtraBold.ttf"
+dest_files=["res://.godot/imported/EBGaramond-ExtraBold.ttf-5679a07bb2b3f759ec45e9352056959c.fontdata"]
 
 [params]
 

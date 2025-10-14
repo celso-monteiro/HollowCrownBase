@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c71np4a7cynmd"
-path="res://.godot/imported/ninja_sword.png-f6b627318d226a4eb391fdb6f17cbb8c.ctex"
+path="res://.godot/imported/ninja_sword.png-53555c7fc83e7619f5f1107479331a01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Weapons/Sword/ninja_sword.png"
-dest_files=["res://.godot/imported/ninja_sword.png-f6b627318d226a4eb391fdb6f17cbb8c.ctex"]
+source_file="res://Assets/Sprites/Weapons/Sword/ninja_sword.png"
+dest_files=["res://.godot/imported/ninja_sword.png-53555c7fc83e7619f5f1107479331a01.ctex"]
 
 [params]
 

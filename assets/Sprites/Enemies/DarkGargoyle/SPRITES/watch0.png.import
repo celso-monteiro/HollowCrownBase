@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp14m6g2i7ew5"
-path.s3tc="res://.godot/imported/watch0.png-48a1643e5b1aa9b3cfc9563f6a03bdbd.s3tc.ctex"
+path.s3tc="res://.godot/imported/watch0.png-943ac6df642ac912f4ac244371f894fc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Enemies/DarkGargoyle/SPRITES/watch0.png"
-dest_files=["res://.godot/imported/watch0.png-48a1643e5b1aa9b3cfc9563f6a03bdbd.s3tc.ctex"]
+source_file="res://Assets/Sprites/Enemies/DarkGargoyle/SPRITES/watch0.png"
+dest_files=["res://.godot/imported/watch0.png-943ac6df642ac912f4ac244371f894fc.s3tc.ctex"]
 
 [params]
 

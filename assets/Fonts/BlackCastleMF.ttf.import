@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://br556jgmlh4wj"
-path="res://.godot/imported/BlackCastleMF.ttf-51caea47efaf19eafd4d862a4aaa52db.fontdata"
+path="res://.godot/imported/BlackCastleMF.ttf-e5d7cd77ce8cb25052a21cb9f15c9712.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/BlackCastleMF.ttf"
-dest_files=["res://.godot/imported/BlackCastleMF.ttf-51caea47efaf19eafd4d862a4aaa52db.fontdata"]
+source_file="res://Assets/Fonts/BlackCastleMF.ttf"
+dest_files=["res://.godot/imported/BlackCastleMF.ttf-e5d7cd77ce8cb25052a21cb9f15c9712.fontdata"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuemrnxa8o3xj"
-path="res://.godot/imported/kael_desk.png-9b083df7a7fcce1fc21b081ae5dbaf5f.ctex"
+path="res://.godot/imported/kael_desk.png-eab26669b95fed0b7e5009c1465ccc1b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/prologue/kael_desk.png"
-dest_files=["res://.godot/imported/kael_desk.png-9b083df7a7fcce1fc21b081ae5dbaf5f.ctex"]
+source_file="res://Assets/Textures/prologue/kael_desk.png"
+dest_files=["res://.godot/imported/kael_desk.png-eab26669b95fed0b7e5009c1465ccc1b.ctex"]
 
 [params]
 

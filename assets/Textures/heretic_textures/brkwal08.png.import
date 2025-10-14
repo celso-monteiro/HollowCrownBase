@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhst3f44ns7ur"
-path="res://.godot/imported/brkwal08.png-b5a15c9100e8ec11ba6bc6c28d47384b.ctex"
+path="res://.godot/imported/brkwal08.png-65e072917e4f4fb6fbb7414396e259b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/brkwal08.png"
-dest_files=["res://.godot/imported/brkwal08.png-b5a15c9100e8ec11ba6bc6c28d47384b.ctex"]
+source_file="res://Assets/Textures/heretic_textures/brkwal08.png"
+dest_files=["res://.godot/imported/brkwal08.png-65e072917e4f4fb6fbb7414396e259b1.ctex"]
 
 [params]
 

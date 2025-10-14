@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b5kj2vijw5yrr"
-path="res://.godot/imported/wand_3.png-8d93e8b07aca6a1a8735deff36af40d7.ctex"
+path="res://.godot/imported/wand_3.png-80d8d2a0aaa0babb9d949f72b5e513a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Weapons/Wand/wand_3.png"
-dest_files=["res://.godot/imported/wand_3.png-8d93e8b07aca6a1a8735deff36af40d7.ctex"]
+source_file="res://Assets/Sprites/Weapons/Wand/wand_3.png"
+dest_files=["res://.godot/imported/wand_3.png-80d8d2a0aaa0babb9d949f72b5e513a9.ctex"]
 
 [params]
 

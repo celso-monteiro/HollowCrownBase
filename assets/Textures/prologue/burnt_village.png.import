@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjaiuocjkmqmp"
-path="res://.godot/imported/burnt_village.png-8ae3499230a34de3b330e3c2e6d28e6c.ctex"
+path="res://.godot/imported/burnt_village.png-450ec29a6f9271613bbc1eddab1f9851.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/prologue/burnt_village.png"
-dest_files=["res://.godot/imported/burnt_village.png-8ae3499230a34de3b330e3c2e6d28e6c.ctex"]
+source_file="res://Assets/Textures/prologue/burnt_village.png"
+dest_files=["res://.godot/imported/burnt_village.png-450ec29a6f9271613bbc1eddab1f9851.ctex"]
 
 [params]
 

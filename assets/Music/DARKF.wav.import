@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cx6mppq7yd0up"
-path="res://.godot/imported/DARKF.wav-7b08a4ca45a0c418d44fe3971576008e.sample"
+path="res://.godot/imported/DARKF.wav-211c9c57addfc66f9d6022c7d4842a0d.sample"
 
 [deps]
 
-source_file="res://assets/Music/DARKF.wav"
-dest_files=["res://.godot/imported/DARKF.wav-7b08a4ca45a0c418d44fe3971576008e.sample"]
+source_file="res://Assets/Music/DARKF.wav"
+dest_files=["res://.godot/imported/DARKF.wav-211c9c57addfc66f9d6022c7d4842a0d.sample"]
 
 [params]
 

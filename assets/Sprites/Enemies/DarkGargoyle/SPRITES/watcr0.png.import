@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de6lfffp6bpa6"
-path="res://.godot/imported/watcr0.png-c675d66d8d1f4e91cbb130666bd9e88b.ctex"
+path="res://.godot/imported/watcr0.png-64a65d9481bdff0ef00154b624d8b1a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Enemies/DarkGargoyle/SPRITES/watcr0.png"
-dest_files=["res://.godot/imported/watcr0.png-c675d66d8d1f4e91cbb130666bd9e88b.ctex"]
+source_file="res://Assets/Sprites/Enemies/DarkGargoyle/SPRITES/watcr0.png"
+dest_files=["res://.godot/imported/watcr0.png-64a65d9481bdff0ef00154b624d8b1a5.ctex"]
 
 [params]
 

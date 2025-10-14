@@ -91,7 +91,7 @@ func _play_motion(is_opening: bool) -> void:
 		_apply_open_state(is_opening, false)
 		#_snap_to_grid()
 		#_update_direction()
-		_update_compass()
+		#_update_compass()
 	)
 
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3vhaytnu36qs"
-path="res://.godot/imported/FLTTELE3.png-1332aa37fd38160f7260d380de2298f6.ctex"
+path="res://.godot/imported/FLTTELE3.png-306a283a6b3b1379bfd31769d026c059.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/FLTTELE3.png"
-dest_files=["res://.godot/imported/FLTTELE3.png-1332aa37fd38160f7260d380de2298f6.ctex"]
+source_file="res://Assets/Textures/heretic_textures/FLTTELE3.png"
+dest_files=["res://.godot/imported/FLTTELE3.png-306a283a6b3b1379bfd31769d026c059.ctex"]
 
 [params]
 

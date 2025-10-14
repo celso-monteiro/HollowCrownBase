@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgey1iehs4x77"
-path.s3tc="res://.godot/imported/styrk0.png-c032e5109211c92fb3fc64efab122835.s3tc.ctex"
+path.s3tc="res://.godot/imported/styrk0.png-9300371ea19ae89681c0aa615e97801f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Enemies/Satyr/SPRITES/styrk0.png"
-dest_files=["res://.godot/imported/styrk0.png-c032e5109211c92fb3fc64efab122835.s3tc.ctex"]
+source_file="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrk0.png"
+dest_files=["res://.godot/imported/styrk0.png-9300371ea19ae89681c0aa615e97801f.s3tc.ctex"]
 
 [params]
 

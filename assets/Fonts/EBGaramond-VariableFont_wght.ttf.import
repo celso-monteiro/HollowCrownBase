@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://3k3y5sdpgc05"
-path="res://.godot/imported/EBGaramond-VariableFont_wght.ttf-ec84c5243e5a1bc50a27f5f9e3dddab2.fontdata"
+path="res://.godot/imported/EBGaramond-VariableFont_wght.ttf-66f6624058fbd8228172b06e553b7296.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/EBGaramond-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/EBGaramond-VariableFont_wght.ttf-ec84c5243e5a1bc50a27f5f9e3dddab2.fontdata"]
+source_file="res://Assets/Fonts/EBGaramond-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/EBGaramond-VariableFont_wght.ttf-66f6624058fbd8228172b06e553b7296.fontdata"]
 
 [params]
 

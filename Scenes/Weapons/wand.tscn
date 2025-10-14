@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b33cboxca6f62" path="res://Assets/Sprites/Weapons/Wand/wand_0.png" id="2_dt76t"]
 [ext_resource type="Texture2D" uid="uid://dv7nyp7nqbmyx" path="res://Assets/Sprites/Weapons/Wand/wand_1.png" id="3_0btrw"]
 [ext_resource type="Texture2D" uid="uid://btx4b6hv2opqo" path="res://Assets/Sprites/Weapons/Wand/wand_2.png" id="4_1u3ow"]
-[ext_resource type="Texture2D" uid="uid://b5kj2vijw5yrr" path="res://Assets/Sprites/Weapons/Wand/wand_3.png" id="5_lgigg"]
+[ext_resource type="Texture2D" uid="uid://b5kj2vijw5yrr" path="res://Assets/wand_3.png" id="5_lgigg"]
 [ext_resource type="AudioStream" uid="uid://25d7slv7vlpx" path="res://Assets/Sounds/SFX/fwand2.ogg" id="6_8wgms"]
 
 [sub_resource type="Animation" id="Animation_xnweh"]

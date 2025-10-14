@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://b723u2vmtq0rx"]
 
 [ext_resource type="Material" uid="uid://c71yladfjhgud" path="res://addons/level_block/default_material.tres" id="1"]
-[ext_resource type="Texture2D" uid="uid://cxysu7t01qmnb" path="res://assets/tileset.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://cxysu7t01qmnb" path="res://Assets/tileset.png" id="2"]
 [ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://dih65pt1ku1vh" path="res://Scenes/Entity/Player/player.tscn" id="4"]
-[ext_resource type="Texture2D" uid="uid://co7u1qyg1tmuo" path="res://assets/Textures/texture.png" id="4_tehvc"]
+[ext_resource type="Texture2D" uid="uid://co7u1qyg1tmuo" path="res://Assets/Textures/texture.png" id="4_tehvc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgbr4"]
 albedo_texture = ExtResource("4_tehvc")

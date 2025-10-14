@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csxgmr5q2umu7"
-path="res://.godot/imported/FLAT512.png-b5c8776bab03490a5adf0c36b5736097.ctex"
+path="res://.godot/imported/FLAT512.png-a3d2f0c624598de35cec3f4873098965.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/FLAT512.png"
-dest_files=["res://.godot/imported/FLAT512.png-b5c8776bab03490a5adf0c36b5736097.ctex"]
+source_file="res://Assets/Textures/heretic_textures/FLAT512.png"
+dest_files=["res://.godot/imported/FLAT512.png-a3d2f0c624598de35cec3f4873098965.ctex"]
 
 [params]
 

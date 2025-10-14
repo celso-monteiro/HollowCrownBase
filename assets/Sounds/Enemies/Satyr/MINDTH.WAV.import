@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ctybc3u0upyev"
-path="res://.godot/imported/MINDTH.WAV-4f976c6ae65e1a33d7d16499100af7ea.sample"
+path="res://.godot/imported/MINDTH.WAV-5140df62b57c9e30f571b63c565795c8.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/Enemies/Satyr/MINDTH.WAV"
-dest_files=["res://.godot/imported/MINDTH.WAV-4f976c6ae65e1a33d7d16499100af7ea.sample"]
+source_file="res://Assets/Sounds/Enemies/Satyr/MINDTH.WAV"
+dest_files=["res://.godot/imported/MINDTH.WAV-5140df62b57c9e30f571b63c565795c8.sample"]
 
 [params]
 

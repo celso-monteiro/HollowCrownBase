@@ -1,12 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://b723u2vmtq0rx"]
+[gd_scene load_steps=16 format=3 uid="uid://b723u2vmtq0rx"]
 
 [ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="1_0hou2"]
-[ext_resource type="Texture2D" uid="uid://co7u1qyg1tmuo" path="res://assets/Textures/texture.png" id="2_407ce"]
+[ext_resource type="Texture2D" uid="uid://co7u1qyg1tmuo" path="res://Assets/Textures/texture.png" id="2_407ce"]
 [ext_resource type="PackedScene" uid="uid://dccdlxfv2uno6" path="res://Scenes/HUD/hud.tscn" id="3_7n01j"]
 [ext_resource type="PackedScene" uid="uid://dih65pt1ku1vh" path="res://Scenes/Entity/Player/player.tscn" id="3_qtdh2"]
-[ext_resource type="Texture2D" uid="uid://dg1wyrnav3ba2" path="res://assets/Sprites/Misc/Torch_128_Copy.png" id="4_v08ga"]
+[ext_resource type="Texture2D" uid="uid://dg1wyrnav3ba2" path="res://Assets/Sprites/Misc/Torch_128_Copy.png" id="4_v08ga"]
 [ext_resource type="PackedScene" uid="uid://mmlwoat6jwgn" path="res://Scenes/Doors/simple_door.tscn" id="6_h876u"]
-[ext_resource type="TileSet" uid="uid://dvnfdkjf23cr7" path="res://assets/Textures/tile_map.tres" id="9_evhg5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgbr4"]
 albedo_texture = ExtResource("2_407ce")
@@ -271,11 +270,6 @@ centered = false
 billboard = 1
 shaded = true
 sprite_frames = SubResource("SpriteFrames_hy1lb")
-
-[node name="TileMap" type="TileMap" parent="Castle"]
-tile_set = ExtResource("9_evhg5")
-rendering_quadrant_size = 128
-format = 2
 
 [node name="HUD" parent="Castle" instance=ExtResource("3_7n01j")]
 

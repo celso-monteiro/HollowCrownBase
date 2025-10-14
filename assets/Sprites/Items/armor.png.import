@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfin7cwfs8mj"
-path.s3tc="res://.godot/imported/armor.png-128552348bb61705a76c60acafa81806.s3tc.ctex"
+path.s3tc="res://.godot/imported/armor.png-da611190ddb7f311e0e7b03817e605fe.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Items/armor.png"
-dest_files=["res://.godot/imported/armor.png-128552348bb61705a76c60acafa81806.s3tc.ctex"]
+source_file="res://Assets/Sprites/Items/armor.png"
+dest_files=["res://.godot/imported/armor.png-da611190ddb7f311e0e7b03817e605fe.s3tc.ctex"]
 
 [params]
 

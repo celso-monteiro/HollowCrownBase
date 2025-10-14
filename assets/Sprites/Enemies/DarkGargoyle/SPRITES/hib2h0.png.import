@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bsx8t2ortpfi7"
-path="res://.godot/imported/hib2h0.png-8eecd4607cc3ca26769cdbda3d323112.ctex"
+path="res://.godot/imported/hib2h0.png-02ccde45044a3338abf8ee29ce9858e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Enemies/DarkGargoyle/SPRITES/hib2h0.png"
-dest_files=["res://.godot/imported/hib2h0.png-8eecd4607cc3ca26769cdbda3d323112.ctex"]
+source_file="res://Assets/Sprites/Enemies/DarkGargoyle/SPRITES/hib2h0.png"
+dest_files=["res://.godot/imported/hib2h0.png-02ccde45044a3338abf8ee29ce9858e9.ctex"]
 
 [params]
 

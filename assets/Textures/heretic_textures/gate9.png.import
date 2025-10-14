@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci16w0ottbgeu"
-path="res://.godot/imported/gate9.png-a7aefed2c201868230d663eb293a5620.ctex"
+path="res://.godot/imported/gate9.png-e9d38ceb51041415d8ec91ce8eca0d81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/gate9.png"
-dest_files=["res://.godot/imported/gate9.png-a7aefed2c201868230d663eb293a5620.ctex"]
+source_file="res://Assets/Textures/heretic_textures/gate9.png"
+dest_files=["res://.godot/imported/gate9.png-e9d38ceb51041415d8ec91ce8eca0d81.ctex"]
 
 [params]
 

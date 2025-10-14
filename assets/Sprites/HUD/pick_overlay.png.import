@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://belv2tnjqd5d6"
-path="res://.godot/imported/pick_overlay.png-e19cc182e44289c05d754167e7e45d08.ctex"
+path="res://.godot/imported/pick_overlay.png-5e09596ca7b463abee777fcd2c23a766.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/HUD/pick_overlay.png"
-dest_files=["res://.godot/imported/pick_overlay.png-e19cc182e44289c05d754167e7e45d08.ctex"]
+source_file="res://Assets/Sprites/HUD/pick_overlay.png"
+dest_files=["res://.godot/imported/pick_overlay.png-5e09596ca7b463abee777fcd2c23a766.ctex"]
 
 [params]
 

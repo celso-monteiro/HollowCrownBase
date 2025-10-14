@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://qsqqpe7jr3o3"
-path="res://.godot/imported/DOROPN.WAV-74104e732bbc6f0a4ecbd05a2ac4aa6a.sample"
+path="res://.godot/imported/DOROPN.WAV-95d11a35d616bfb0c0bf8ec476cb693d.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/SFX/DOROPN.WAV"
-dest_files=["res://.godot/imported/DOROPN.WAV-74104e732bbc6f0a4ecbd05a2ac4aa6a.sample"]
+source_file="res://Assets/Sounds/SFX/DOROPN.WAV"
+dest_files=["res://.godot/imported/DOROPN.WAV-95d11a35d616bfb0c0bf8ec476cb693d.sample"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dyoe3my2323ed"
-path="res://.godot/imported/black_overlay.png-a7050e8b70bb769630c070e94c59ebcd.ctex"
+path="res://.godot/imported/black_overlay.png-cebfef69c4d39e48d74b0f3f01650f1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Menu/black_overlay.png"
-dest_files=["res://.godot/imported/black_overlay.png-a7050e8b70bb769630c070e94c59ebcd.ctex"]
+source_file="res://Assets/Sprites/Menu/black_overlay.png"
+dest_files=["res://.godot/imported/black_overlay.png-cebfef69c4d39e48d74b0f3f01650f1c.ctex"]
 
 [params]
 

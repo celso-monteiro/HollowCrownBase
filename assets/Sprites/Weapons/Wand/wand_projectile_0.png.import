@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dnef51u67sg8e"
-path.s3tc="res://.godot/imported/wand_projectile_0.png-8b8a184d6db39225bb1ae9cf9aef83d4.s3tc.ctex"
+path.s3tc="res://.godot/imported/wand_projectile_0.png-4d0de0153194808e9c6c323a8184e5c8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Weapons/Wand/wand_projectile_0.png"
-dest_files=["res://.godot/imported/wand_projectile_0.png-8b8a184d6db39225bb1ae9cf9aef83d4.s3tc.ctex"]
+source_file="res://Assets/Sprites/Weapons/Wand/wand_projectile_0.png"
+dest_files=["res://.godot/imported/wand_projectile_0.png-4d0de0153194808e9c6c323a8184e5c8.s3tc.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://di3bwkspn367j"
-path.s3tc="res://.godot/imported/sw50on.png-66a64111781e6f380b737b52f6422d84.s3tc.ctex"
+path.s3tc="res://.godot/imported/sw50on.png-7794c534b391a03428eaa94a45271dc8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Misc/sw50on.png"
-dest_files=["res://.godot/imported/sw50on.png-66a64111781e6f380b737b52f6422d84.s3tc.ctex"]
+source_file="res://Assets/Sprites/Misc/sw50on.png"
+dest_files=["res://.godot/imported/sw50on.png-7794c534b391a03428eaa94a45271dc8.s3tc.ctex"]
 
 [params]
 

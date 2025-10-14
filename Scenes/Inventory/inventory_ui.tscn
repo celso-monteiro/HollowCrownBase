@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://dfpg12hemf2k3"]
 
-[ext_resource type="Texture2D" uid="uid://bts2eev1mg8j" path="res://assets/Sprites/Menu/Inventory/inventory.png" id="1_8vrkd"]
+[ext_resource type="Texture2D" uid="uid://bts2eev1mg8j" path="res://Assets/Sprites/Menu/Inventory/inventory.png" id="1_8vrkd"]
 [ext_resource type="Script" path="res://Scenes/Inventory/inventory_ui.gd" id="1_se3fm"]
 [ext_resource type="PackedScene" uid="uid://b43g3khfjxvr2" path="res://Scenes/Menu/blur_overlay.tscn" id="3_u6va0"]
-[ext_resource type="Texture2D" uid="uid://8su3rc5dmnlj" path="res://assets/Sprites/Menu/Inventory/item_slot_idle.png" id="4_fs7ow"]
-[ext_resource type="Texture2D" uid="uid://du2ef1ml0smsf" path="res://assets/Sprites/Menu/Inventory/item_slot_selected.png" id="5_s4u12"]
+[ext_resource type="Texture2D" uid="uid://8su3rc5dmnlj" path="res://Assets/Sprites/Menu/Inventory/item_slot_idle.png" id="4_fs7ow"]
+[ext_resource type="Texture2D" uid="uid://du2ef1ml0smsf" path="res://Assets/Sprites/Menu/Inventory/item_slot_selected.png" id="5_s4u12"]
 [ext_resource type="Script" path="res://Scenes/Inventory/ItemSlot.gd" id="6_0vdre"]
-[ext_resource type="Texture2D" uid="uid://b0uoc3k0872o0" path="res://assets/Sprites/Menu/Inventory/slot.png" id="7_jipu7"]
-[ext_resource type="FontFile" uid="uid://br556jgmlh4wj" path="res://assets/Fonts/BlackCastleMF.ttf" id="7_q84qk"]
-[ext_resource type="Texture2D" uid="uid://b7aacwwk761w0" path="res://assets/Sprites/Items/silver_shield.png" id="7_xqmu5"]
+[ext_resource type="Texture2D" uid="uid://b0uoc3k0872o0" path="res://Assets/Sprites/Menu/Inventory/slot.png" id="7_jipu7"]
+[ext_resource type="FontFile" uid="uid://br556jgmlh4wj" path="res://Assets/Fonts/BlackCastleMF.ttf" id="7_q84qk"]
+[ext_resource type="Texture2D" uid="uid://b7aacwwk761w0" path="res://Assets/Sprites/Items/silver_shield.png" id="7_xqmu5"]
 
 [node name="Inventory_UI" type="Control"]
 layout_mode = 3

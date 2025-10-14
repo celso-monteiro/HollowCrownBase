@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bicytd35q8dbg"
-path.s3tc="res://.godot/imported/statue_03.png-536db7db3882c04c66285d138af3c31e.s3tc.ctex"
+path.s3tc="res://.godot/imported/statue_03.png-07fb5edd4a241bc20ee22fa22b67a2f5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Misc/statue_03.png"
-dest_files=["res://.godot/imported/statue_03.png-536db7db3882c04c66285d138af3c31e.s3tc.ctex"]
+source_file="res://Assets/Sprites/Misc/statue_03.png"
+dest_files=["res://.godot/imported/statue_03.png-07fb5edd4a241bc20ee22fa22b67a2f5.s3tc.ctex"]
 
 [params]
 

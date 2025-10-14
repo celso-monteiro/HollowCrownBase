@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dk6t68av6t04v"
-path="res://.godot/imported/MINAT3.WAV-ffc2c113b124a0c70f0804ff0e457997.sample"
+path="res://.godot/imported/MINAT3.WAV-352b6e39ae0732c83612d9d0b092acd4.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/Enemies/Satyr/MINAT3.WAV"
-dest_files=["res://.godot/imported/MINAT3.WAV-ffc2c113b124a0c70f0804ff0e457997.sample"]
+source_file="res://Assets/Sounds/Enemies/Satyr/MINAT3.WAV"
+dest_files=["res://.godot/imported/MINAT3.WAV-352b6e39ae0732c83612d9d0b092acd4.sample"]
 
 [params]
 

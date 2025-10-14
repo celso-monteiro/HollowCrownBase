@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btmeqanwbgly"
-path="res://.godot/imported/pickeable_torch_1.png-256eb3f18e6c41036a5489a081927fcb.ctex"
+path="res://.godot/imported/pickeable_torch_1.png-bc68826f9e2e90683bb92527d085fbf3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Items/pickeable_torch_1.png"
-dest_files=["res://.godot/imported/pickeable_torch_1.png-256eb3f18e6c41036a5489a081927fcb.ctex"]
+source_file="res://Assets/Sprites/Items/pickeable_torch_1.png"
+dest_files=["res://.godot/imported/pickeable_torch_1.png-bc68826f9e2e90683bb92527d085fbf3.ctex"]
 
 [params]
 

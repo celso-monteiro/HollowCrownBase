@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyj5sjhpwvy1i"
-path="res://.godot/imported/Dungeon-Crawler-6-5-2024.png-f8d6718a2e03fe45a3ce228e5e94b7ab.ctex"
+path="res://.godot/imported/Dungeon-Crawler-6-5-2024.png-facdcd90b4fa40b5a7e42de904695221.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Menu/Dungeon-Crawler-6-5-2024.png"
-dest_files=["res://.godot/imported/Dungeon-Crawler-6-5-2024.png-f8d6718a2e03fe45a3ce228e5e94b7ab.ctex"]
+source_file="res://Assets/Sprites/Menu/Dungeon-Crawler-6-5-2024.png"
+dest_files=["res://.godot/imported/Dungeon-Crawler-6-5-2024.png-facdcd90b4fa40b5a7e42de904695221.ctex"]
 
 [params]
 

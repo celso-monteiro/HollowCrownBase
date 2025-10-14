@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hmmpcmupy6w6"
-path="res://.godot/imported/enchanted_shield.png-6ee0358a019e313391c3c03ea8cf8920.ctex"
+path="res://.godot/imported/enchanted_shield.png-c4297cb9ac6ebfa58f604bc4eef3b00f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Items/enchanted_shield.png"
-dest_files=["res://.godot/imported/enchanted_shield.png-6ee0358a019e313391c3c03ea8cf8920.ctex"]
+source_file="res://Assets/Sprites/Items/enchanted_shield.png"
+dest_files=["res://.godot/imported/enchanted_shield.png-c4297cb9ac6ebfa58f604bc4eef3b00f.ctex"]
 
 [params]
 

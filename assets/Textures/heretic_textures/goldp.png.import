@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c02vky2el5oyu"
-path="res://.godot/imported/goldp.png-58685cc8373bc50bba63e01973b9e849.ctex"
+path="res://.godot/imported/goldp.png-e36b7ffe814cc8d210ed37b6e865999a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/goldp.png"
-dest_files=["res://.godot/imported/goldp.png-58685cc8373bc50bba63e01973b9e849.ctex"]
+source_file="res://Assets/Textures/heretic_textures/goldp.png"
+dest_files=["res://.godot/imported/goldp.png-e36b7ffe814cc8d210ed37b6e865999a.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cno4gwp6luivv"
-path.s3tc="res://.godot/imported/treasure_03.png-fbbb2511fc227f7e2b1076f4779dbd8d.s3tc.ctex"
+path.s3tc="res://.godot/imported/treasure_03.png-6c014e92819cd594eb18a48559a69516.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Items/treasure_03.png"
-dest_files=["res://.godot/imported/treasure_03.png-fbbb2511fc227f7e2b1076f4779dbd8d.s3tc.ctex"]
+source_file="res://Assets/Sprites/Items/treasure_03.png"
+dest_files=["res://.godot/imported/treasure_03.png-6c014e92819cd594eb18a48559a69516.s3tc.ctex"]
 
 [params]
 

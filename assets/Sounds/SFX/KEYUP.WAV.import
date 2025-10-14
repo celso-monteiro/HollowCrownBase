@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpryq5qwlh3ev"
-path="res://.godot/imported/KEYUP.WAV-89aaff6b1aba51bc39d34939777e8ca3.sample"
+path="res://.godot/imported/KEYUP.WAV-0e4aba63bd4c3f5d2a3ef0ee7f34a477.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/SFX/KEYUP.WAV"
-dest_files=["res://.godot/imported/KEYUP.WAV-89aaff6b1aba51bc39d34939777e8ca3.sample"]
+source_file="res://Assets/Sounds/SFX/KEYUP.WAV"
+dest_files=["res://.godot/imported/KEYUP.WAV-0e4aba63bd4c3f5d2a3ef0ee7f34a477.sample"]
 
 [params]
 

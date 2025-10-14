@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5hggmctj1tpl"
-path.s3tc="res://.godot/imported/end_door.png-ea2beca89f7e913c99ae50b555171798.s3tc.ctex"
+path.s3tc="res://.godot/imported/end_door.png-77359400b0ebec575357e97851cf4397.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Doors/end_door.png"
-dest_files=["res://.godot/imported/end_door.png-ea2beca89f7e913c99ae50b555171798.s3tc.ctex"]
+source_file="res://Assets/Sprites/Doors/end_door.png"
+dest_files=["res://.godot/imported/end_door.png-77359400b0ebec575357e97851cf4397.s3tc.ctex"]
 
 [params]
 

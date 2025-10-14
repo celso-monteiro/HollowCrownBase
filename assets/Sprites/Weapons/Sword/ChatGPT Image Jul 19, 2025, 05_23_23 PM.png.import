@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu0citenmnt42"
-path="res://.godot/imported/ChatGPT Image Jul 19, 2025, 05_23_23 PM.png-cd82d7703e8576e49dfbc2a30888b526.ctex"
+path="res://.godot/imported/ChatGPT Image Jul 19, 2025, 05_23_23 PM.png-a1917a6b2ede4acc2eb0c8ecdf78d2c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Weapons/Sword/ChatGPT Image Jul 19, 2025, 05_23_23 PM.png"
-dest_files=["res://.godot/imported/ChatGPT Image Jul 19, 2025, 05_23_23 PM.png-cd82d7703e8576e49dfbc2a30888b526.ctex"]
+source_file="res://Assets/Sprites/Weapons/Sword/ChatGPT Image Jul 19, 2025, 05_23_23 PM.png"
+dest_files=["res://.godot/imported/ChatGPT Image Jul 19, 2025, 05_23_23 PM.png-a1917a6b2ede4acc2eb0c8ecdf78d2c3.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vhcn3skt0cov"
-path.s3tc="res://.godot/imported/styri0.png-a767e4895455de7b4341a569bb20395c.s3tc.ctex"
+path.s3tc="res://.godot/imported/styri0.png-d4a3e72131dbb9ae2a392547c8038745.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Sprites/Enemies/Satyr/SPRITES/styri0.png"
-dest_files=["res://.godot/imported/styri0.png-a767e4895455de7b4341a569bb20395c.s3tc.ctex"]
+source_file="res://Assets/Sprites/Enemies/Satyr/SPRITES/styri0.png"
+dest_files=["res://.godot/imported/styri0.png-d4a3e72131dbb9ae2a392547c8038745.s3tc.ctex"]
 
 [params]
 

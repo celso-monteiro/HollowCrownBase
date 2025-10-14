@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c8bsikq5f8viw"
-path="res://.godot/imported/rckwal02.png-067c4d75d67c05686a201b8157bfa754.ctex"
+path="res://.godot/imported/rckwal02.png-647f20faef59944875e5a5ce9c1bd4fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/rckwal02.png"
-dest_files=["res://.godot/imported/rckwal02.png-067c4d75d67c05686a201b8157bfa754.ctex"]
+source_file="res://Assets/Textures/heretic_textures/rckwal02.png"
+dest_files=["res://.godot/imported/rckwal02.png-647f20faef59944875e5a5ce9c1bd4fc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgtkw71mt80m0"
-path="res://.godot/imported/golda.png-9dc9e698db5f7f7a115d604813b14438.ctex"
+path="res://.godot/imported/golda.png-7535fa6ba730b93633e88b1c9f57df52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Textures/heretic_textures/golda.png"
-dest_files=["res://.godot/imported/golda.png-9dc9e698db5f7f7a115d604813b14438.ctex"]
+source_file="res://Assets/Textures/heretic_textures/golda.png"
+dest_files=["res://.godot/imported/golda.png-7535fa6ba730b93633e88b1c9f57df52.ctex"]
 
 [params]
 

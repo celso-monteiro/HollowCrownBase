@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dutfckddn1ko8"
-path="res://.godot/imported/PLRPAI.WAV-b97f940a983143848fda0b525dfcc261.sample"
+path="res://.godot/imported/PLRPAI.WAV-3d8ec3376a75f24cfe1b41bc82e5c750.sample"
 
 [deps]
 
-source_file="res://assets/Sounds/SFX/PLRPAI.WAV"
-dest_files=["res://.godot/imported/PLRPAI.WAV-b97f940a983143848fda0b525dfcc261.sample"]
+source_file="res://Assets/Sounds/SFX/PLRPAI.WAV"
+dest_files=["res://.godot/imported/PLRPAI.WAV-3d8ec3376a75f24cfe1b41bc82e5c750.sample"]
 
 [params]
 
