@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://3b8vi4u2cofx"]
 
-[ext_resource type="Script" path="res://Scenes/Maps/full_map.gd" id="1_0vfqr"]
+[ext_resource type="Script" path="res://Scenes/full_map.gd" id="1_4cw2h"]
 
 [node name="FullMap" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_0vfqr")
+script = ExtResource("1_4cw2h")
 
 [node name="Dim" type="ColorRect" parent="."]
 layout_mode = 1

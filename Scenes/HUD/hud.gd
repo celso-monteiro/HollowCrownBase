@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+#@onready var full_map := preload("res://Scenes/Maps/full_map.tscn").instantiate()
+
 @onready var armor = $Control/StatusBar/ArmorLabel
 @onready var health = $Control/StatusBar/HealthLabel
 @onready var ammo = $Control/StatusBar/AmmoLabel

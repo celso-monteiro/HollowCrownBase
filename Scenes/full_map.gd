@@ -24,10 +24,22 @@ func close_map() -> void:
 	visible = false
 	# get_tree().paused = false
 
+#func _unhandled_input(e: InputEvent) -> void:
+	#if not visible: return
+	#if e.is_action_pressed("map") or e.is_action_pressed("ui_cancel"):
+		#close_map()
+		
 func _unhandled_input(e: InputEvent) -> void:
-	if not visible: return
-	if e.is_action_pressed("map") or e.is_action_pressed("ui_cancel"):
+	if e.is_action_pressed("map"):
+		print("M key pressed")
+		visible = not visible
+		if visible:
+			map_texrect.texture = MapService.get_texture()
+		get_viewport().set_input_as_handled()
+
+	elif visible and e.is_action_pressed("ui_cancel"):
 		close_map()
+
 
 func _redraw() -> void:
 	var gs = MapService.grid_size

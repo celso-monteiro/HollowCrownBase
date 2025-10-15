@@ -83,6 +83,8 @@ func _input(event: InputEvent) -> void:
 		_turn(90)
 	if event.is_action_pressed("right") or event.is_action_pressed("ui_right"):
 		_turn(-90)
+	#if event.is_action_pressed("map") or event.is_action_pressed("ui_cancel"):
+		#print("Map request")
 
 	# Use / interact (front ray)
 	if event.is_action_pressed("use"):
