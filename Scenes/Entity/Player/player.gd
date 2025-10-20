@@ -21,6 +21,7 @@ var _current_intent := ""            # "forward" | "back" | "left" | "right" | "
 var _played_stop_anim := false       # to play headbob once when chain stops
 
 func _ready() -> void:
+	MapService.configure(64, 64, Vector2i(0, 0)) # <-- use your real grid size/origin
 	_enable_rays()
 	_snap_to_grid()
 	_update_direction()
@@ -75,8 +76,8 @@ func _physics_process(_delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	# Quit / other UI
-	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+	#if event.is_action_pressed("ui_cancel"):
+		#get_tree().quit()
 
 	# One-turn-per-press (kept simple)
 	if event.is_action_pressed("left") or event.is_action_pressed("ui_left"):
@@ -85,6 +86,16 @@ func _input(event: InputEvent) -> void:
 		_turn(-90)
 	#if event.is_action_pressed("map") or event.is_action_pressed("ui_cancel"):
 		#print("Map request")
+	
+	if event.is_action_pressed("map"):
+		MapService.ensure_full_map()
+		var full_map := MapService._full_map
+		print("[Player] MapService W×H:", MapService.width, "x", MapService.height)
+
+		full_map.visible = not full_map.visible
+		if full_map.visible:
+			full_map.map_texrect.texture = MapService.get_texture()
+		print("Map toggled: ", full_map.visible)
 
 	# Use / interact (front ray)
 	if event.is_action_pressed("use"):
@@ -104,20 +115,6 @@ func _enable_rays() -> void:
 	for r in [front_ray, back_ray, left_ray, right_ray]:
 		if r:
 			r.enabled = true
-#
-#func _can_move_intent(intent: String) -> bool:
-	#match intent:
-		#"forward":
-			#return front_ray == null or not front_ray.is_colliding()
-		#"back":
-			#return back_ray == null or not back_ray.is_colliding()
-		#"left":
-			#return left_ray == null or not left_ray.is_colliding()
-		#"right":
-			#return right_ray == null or not right_ray.is_colliding()
-		#_:
-			#return false
-
 func _dir_vector_for_intent(intent: String) -> Vector3:
 	# Forward/back use -Z/+Z; left/right use -X/+X in local space
 	var f := -global_transform.basis.z.normalized()

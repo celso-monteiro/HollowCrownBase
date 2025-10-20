@@ -1,5 +1,4 @@
 extends Node
-#class_name MapService
 
 signal map_updated(tex: Texture2D)
 signal cell_revealed(cell: Vector2i, state: int) # 1=seen, 2=visited
@@ -28,24 +27,37 @@ var _tex  : ImageTexture
 var _dirty := true
 var _last_player_cell := Vector2i(-9999, -9999)
 
+var grid_size: Vector2i:
+	get:
+		return Vector2i(width, height)
+		
+var last_player_cell: Vector2i: 
+	get:
+		return _last_player_cell
+
+# ---- Player facing (simple version) ----
+enum Facing { NORTH, EAST, SOUTH, WEST }
+
+var player_facing: int = Facing.SOUTH
+
+
 func _emit_updated() -> void:
 	emit_signal("map_updated", get_texture())
 
 func configure(map_width: int, map_height: int, map_origin_cell := Vector2i.ZERO) -> void:
+	print("[MapService] configure call with:", map_width, "x", map_height, " origin:", map_origin_cell)
 	width  = map_width
 	height = map_height
 	origin_cell = map_origin_cell
-	var size = width * height
-	states = PackedByteArray()
-	states.resize(size)
+
 	_img = Image.create(width * TILE_PX, height * TILE_PX, false, Image.FORMAT_RGBA8)
+	print("[MapService] img size:", _img.get_width(), "x", _img.get_height())
 	_tex = ImageTexture.create_from_image(_img)
 	_clear_background()
 	_dirty = true
 	_emit_updated()
 
 func _clear_background() -> void:
-	_img.lock()
 	_img.fill(COLOR_BG)
 	if SHOW_GRID:
 		for x in range(width + 1):
@@ -56,7 +68,6 @@ func _clear_background() -> void:
 			var py = y * TILE_PX
 			for x in range(_img.get_width()):
 				_img.set_pixel(x, py, COLOR_GRID)
-	_img.unlock()
 
 func get_texture() -> Texture2D:
 	if _dirty:
@@ -113,11 +124,9 @@ func _mark_visited(c: Vector2i) -> void:
 func _fill_cell(c: Vector2i, col: Color) -> void:
 	var x0 = c.x * TILE_PX
 	var y0 = c.y * TILE_PX
-	_img.lock()
 	for y in range(TILE_PX):
 		for x in range(TILE_PX):
 			_img.set_pixel(x0 + x, y0 + y, col)
-	_img.unlock()
 
 func _draw_player(c: Vector2i) -> void:
 	# redraw last visited so the previous player marker disappears
@@ -128,11 +137,9 @@ func _draw_player(c: Vector2i) -> void:
 	var y0 = c.y * TILE_PX
 	var cx = x0 + TILE_PX / 2
 	var cy = y0 + TILE_PX / 2
-	_img.lock()
 	for i in range(-4, 5):
 		_img.set_pixel(cx + i, cy, COLOR_PLAYER)
 		_img.set_pixel(cx, cy + i, COLOR_PLAYER)
-	_img.unlock()
 	_last_player_cell = c
 	_dirty = true
 
@@ -141,3 +148,55 @@ func _draw_player(c: Vector2i) -> void:
 func preload_walkable(cells: PackedVector2Array) -> void:
 	# Not painting here keeps unexplored dark; this exists if you need a mask later.
 	pass
+	
+var _full_map: Control
+
+func ensure_full_map() -> void:
+	if _full_map and is_instance_valid(_full_map):
+		return
+	var scene := preload("res://Scenes/Maps/full_map.tscn")
+	_full_map = scene.instantiate()
+	get_tree().root.add_child(_full_map)
+	_full_map.visible = false
+	_full_map.process_mode = Node.PROCESS_MODE_ALWAYS
+	
+func toggle_full_map() -> void:
+	# Make sure the FullMap scene exists
+	ensure_full_map()
+
+	# Get the instance we created or cached
+	var fm = _full_map
+	if fm == null:
+		push_error("[MapService] toggle_full_map: _full_map is null!")
+		return
+
+	# Toggle visibility
+	fm.visible = not fm.visible
+	print("[MapService] FullMap visible:", fm.visible)
+
+	# When showing, assign the latest texture
+	if fm.visible:
+		var tex := get_texture()
+		print("[MapService] get_texture() returned:", tex)
+		if tex == null:
+			push_warning("[MapService] Texture is null, map will appear blank.")
+		else:
+			# make sure TextureRect exists
+			if not fm.has_node("MapTexture"):
+				push_warning("[MapService] FullMap has no node 'MapTexture'")
+				return
+			fm.map_texrect.texture = tex
+			print("[MapService] Texture assigned to FullMap.")
+	
+func get_facing_vector() -> Vector2i:
+	match player_facing:
+		Facing.NORTH:
+			return Vector2i(0, -1)
+		Facing.SOUTH:
+			return Vector2i(0, 1)
+		Facing.EAST:
+			return Vector2i(1, 0)
+		Facing.WEST:
+			return Vector2i(-1, 0)
+		_:
+			return Vector2i.ZERO

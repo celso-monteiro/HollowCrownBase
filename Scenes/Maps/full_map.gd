@@ -1,7 +1,7 @@
 extends Control
 
-@export var cell_px := 6              # map cell size when rendering the full map
-@export var show_player := true       # toggle player arrow on map
+@export var cell_px := 6
+@export var show_player := true
 @onready var map_texrect: TextureRect = $MapImage
 
 var img := Image.create(1,1,false,Image.FORMAT_RGBA8)
@@ -9,72 +9,61 @@ var tex := ImageTexture.create_from_image(img)
 
 func _ready() -> void:
 	visible = false
-	map_texrect.texture = tex
-	MapService.map_changed.connect(_redraw)
-	_redraw()
-
+	print("[FullMap] ready; MapService W×H:", MapService.width, "x", MapService.height)
+	MapService.map_updated.connect(_redraw)
+	
 func open_map() -> void:
 	visible = true
 	_redraw()
-	# optional: pause game input while map open
-	# get_tree().paused = true
-	# process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 
 func close_map() -> void:
 	visible = false
-	# get_tree().paused = false
 
-#func _unhandled_input(e: InputEvent) -> void:
-	#if not visible: return
-	#if e.is_action_pressed("map") or e.is_action_pressed("ui_cancel"):
-		#close_map()
-		
 func _unhandled_input(e: InputEvent) -> void:
-	if e.is_action_pressed("map"):
-		print("M key pressed")
-		visible = not visible
-		if visible:
-			map_texrect.texture = MapService.get_texture()
-		get_viewport().set_input_as_handled()
-
-	elif visible and e.is_action_pressed("ui_cancel"):
+	if not visible: return
+	if e.is_action_pressed("map"): #or e.is_action_pressed("ui_cancel"):
 		close_map()
 
 
-func _redraw() -> void:
-	var gs = MapService.grid_size
+func _redraw(_tex: Texture2D = null) -> void:
+	if MapService.width <= 0 or MapService.height <= 0:
+		print("[FullMap] redraw skipped: map not configured yet.")
+		return
+	# ...continue only when sizes are valid...
+	var gs: Vector2i = MapService.grid_size
 	var px := cell_px
 	img = Image.create(gs.x * px, gs.y * px, false, Image.FORMAT_RGBA8)
-	img.lock()
 
 	for y in gs.y:
 		for x in gs.x:
 			var c := Vector2i(x,y)
 			var t = MapService.get_cell(c)
-			var col = t
+			var col: Color			
 			match t:
-				MapService.CELL_FLOOR: MapService.COL_FLOOR
-				MapService.CELL_SEEN:  MapService.COL_SEEN
-				MapService.CELL_DOOR:  MapService.COL_DOOR  # keep door glyph if you tag them
-				_: MapService.COL_FOG
+				MapService.CELL_FLOOR:
+					col = MapService.COL_FLOOR
+				MapService.CELL_SEEN:
+					col = MapService.COL_SEEN
+				MapService.CELL_DOOR:
+					col = MapService.COL_DOOR
+				_:
+					col = MapService.COL_FOG
 			for yy in px:
 				for xx in px:
 					img.set_pixel(x*px+xx, y*px+yy, col)
-
-	# player arrow (optional)
 	if show_player:
-		var p = MapService.player_cell * px + Vector2i(px/2, px/2)
-		var tip = p + MapService.player_facing * (px/2)
+		var p = MapService.last_player_cell * px + Vector2i(px/2, px/2)
+		var dir := MapService.get_facing_vector()
+		var tip = p + dir * (px / 2)
 		_draw_disc(p, 2, Color(1,0.9,0.2,1))
 		_draw_line(p, tip, Color(1,0.3,0.1,1))
-
-	img.unlock()
 	tex.update(img)
 	map_texrect.texture = tex
 
 func _draw_disc(center: Vector2i, r: int, col: Color) -> void:
-	for y in range(-r, r + 1):
-		for x in range(-r, r + 1):
+	var gs: Vector2i = MapService.grid_size
+	for y in gs.y:
+		for x in gs.x:
 			if x*x + y*y <= r*r:
 				var pt := center + Vector2i(x,y)
 				if pt.x >= 0 and pt.y >= 0 and pt.x < img.get_width() and pt.y < img.get_height():
