@@ -58,7 +58,7 @@ func _physics_process(_delta: float) -> void:
 		intent = "left"
 	elif Input.is_action_pressed("right") or Input.is_action_pressed("ui_right"):
 		intent = "right"
-
+		
 	# Start chain if not moving and a key is held
 	if not is_busy and intent != "":
 		if _can_move_intent(intent):
@@ -75,26 +75,27 @@ func _physics_process(_delta: float) -> void:
 		_do_stop_animation_once()
 
 func _input(event: InputEvent) -> void:
-	# Quit / other UI
-	#if event.is_action_pressed("ui_cancel"):
-		#get_tree().quit()
+	#Quit / other UI
+	if event.is_action_pressed("ui_cancel"):
+		get_tree().quit()
 
 	# One-turn-per-press (kept simple)
 	if event.is_action_pressed("left") or event.is_action_pressed("ui_left"):
 		_turn(90)
 	if event.is_action_pressed("right") or event.is_action_pressed("ui_right"):
 		_turn(-90)
-	#if event.is_action_pressed("map") or event.is_action_pressed("ui_cancel"):
+	#if event.is_action_pressed("map"):
 		#print("Map request")
 	
 	if event.is_action_pressed("map"):
 		MapService.ensure_full_map()
-		var full_map := MapService._full_map
-		print("[Player] MapService W×H:", MapService.width, "x", MapService.height)
-
+		var full_map = MapService._full_map
 		full_map.visible = not full_map.visible
+		#print("Full Map visible ? ", full_map.visible)
+		print("[Player] MapService W×H:", MapService.width, "x", MapService.height)
 		if full_map.visible:
 			full_map.map_texrect.texture = MapService.get_texture()
+			print("Full Map visible")
 		print("Map toggled: ", full_map.visible)
 
 	# Use / interact (front ray)
