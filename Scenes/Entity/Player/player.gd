@@ -22,10 +22,14 @@ var _played_stop_anim := false       # to play headbob once when chain stops
 
 func _ready() -> void:
 	MapService.configure(64, 64, Vector2i(0, 0)) # <-- use your real grid size/origin
+	# for a quick visual test
+	MapService.reveal_at_world(global_transform.origin, true)
 	_enable_rays()
 	_snap_to_grid()
 	_update_direction()
-
+func _on_step_finished():
+	MapService.reveal_at_world(global_transform.origin, true)
+	
 func _update_compass():
 	var f := -global_transform.basis.z.normalized()
 	var dirs = {
@@ -88,16 +92,9 @@ func _input(event: InputEvent) -> void:
 		#print("Map request")
 	
 	if event.is_action_pressed("map"):
-		MapService.ensure_full_map()
-		var full_map = MapService._full_map
-		full_map.visible = not full_map.visible
-		#print("Full Map visible ? ", full_map.visible)
-		print("[Player] MapService W×H:", MapService.width, "x", MapService.height)
-		if full_map.visible:
-			full_map.map_texrect.texture = MapService.get_texture()
-			print("Full Map visible")
-		print("Map toggled: ", full_map.visible)
-
+		MapService.toggle_full_map()
+		MapService.reveal_at_world(global_transform.origin, true)  # at start and after each grid move
+		
 	# Use / interact (front ray)
 	if event.is_action_pressed("use"):
 		var ray := $FrontRay

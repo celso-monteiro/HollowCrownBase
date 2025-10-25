@@ -85,7 +85,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
-west_face = 8
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock19" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock20" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
 top_face = 50
 bottom_face = 9
 
@@ -275,3 +290,6 @@ sprite_frames = SubResource("SpriteFrames_hy1lb")
 
 [node name="SimpleDoor" parent="." groups=["player"] instance=ExtResource("6_h876u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0543566, -8.94518)
+
+[node name="SimpleDoor2" parent="." groups=["player"] instance=ExtResource("6_h876u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.504889, 0.0543566, 7.05482)
