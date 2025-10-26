@@ -20,13 +20,18 @@ var direction := Vector3.FORWARD     # forward in local space (-basis.z after sn
 var _current_intent := ""            # "forward" | "back" | "left" | "right" | ""
 var _played_stop_anim := false       # to play headbob once when chain stops
 
+var _last_reveal_cell: Vector2i = Vector2i(-9999, -9999)
+
 func _ready() -> void:
-	MapService.configure(64, 64, Vector2i(0, 0)) # <-- use your real grid size/origin
+	#MapService.configure(64, 64, Vector2i(0, 0)) # <-- use your real grid size/origin
+	MapService.configure(64, 64, Vector2i(-32, -32))
 	# for a quick visual test
 	MapService.reveal_at_world(global_transform.origin, true)
 	_enable_rays()
 	_snap_to_grid()
 	_update_direction()
+
+	
 func _on_step_finished():
 	MapService.reveal_at_world(global_transform.origin, true)
 	
@@ -62,7 +67,6 @@ func _physics_process(_delta: float) -> void:
 		intent = "left"
 	elif Input.is_action_pressed("right") or Input.is_action_pressed("ui_right"):
 		intent = "right"
-		
 	# Start chain if not moving and a key is held
 	if not is_busy and intent != "":
 		if _can_move_intent(intent):
@@ -77,6 +81,8 @@ func _physics_process(_delta: float) -> void:
 	# If no key is held and we haven't played stop animation yet, do it once.
 	if intent == "" and not _played_stop_anim and not is_busy:
 		_do_stop_animation_once()
+	# existing movement logic...
+	_update_automap()
 
 func _input(event: InputEvent) -> void:
 	#Quit / other UI
@@ -200,3 +206,11 @@ func _snap_to_grid() -> void:
 	p.x = round(p.x / STEP_SIZE) * STEP_SIZE
 	p.z = round(p.z / STEP_SIZE) * STEP_SIZE
 	global_transform.origin = p
+	
+func _update_automap() -> void:
+	if not MapService:
+		return
+	var current_cell := MapService.world_to_cell(global_transform.origin)
+	if current_cell != _last_reveal_cell:
+		MapService.reveal_at_world(global_transform.origin, true)
+		_last_reveal_cell = current_cell

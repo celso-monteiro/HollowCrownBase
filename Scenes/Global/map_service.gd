@@ -58,6 +58,7 @@ var _full_map: CanvasLayer
 # Public API
 # =================================================================
 
+
 func configure(map_width: int, map_height: int, map_origin_cell: Vector2i = Vector2i.ZERO) -> void:
 	# Initialize map dimensions and backing image/texture
 	width       = map_width
@@ -90,7 +91,7 @@ func world_to_cell(world_pos: Vector3) -> Vector2i:
 	# X to the right; -Z forward maps to +Y on the texture
 	return Vector2i(
 		int(round(world_pos.x / STEP_SIZE)),
-		int(round(-world_pos.z / STEP_SIZE))
+		int(round(world_pos.z / STEP_SIZE))
 	)
 
 func in_bounds(c: Vector2i) -> bool:
