@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://mmlwoat6jwgn"]
+[gd_scene load_steps=11 format=3 uid="uid://btyjccwa6pjnv"]
 
-[ext_resource type="Script" path="res://Scenes/Doors/simple_door.gd" id="1_eomb3"]
-[ext_resource type="Texture2D" uid="uid://bhwwuejw0fc3r" path="res://Assets/Textures/Doors/doorbig2.png" id="2_fvl5g"]
-[ext_resource type="AudioStream" uid="uid://qsqqpe7jr3o3" path="res://Assets/Sounds/SFX/DOROPN.WAV" id="3_3cjke"]
+[ext_resource type="Script" path="res://Scenes/Doors/simple_door.gd" id="1_srmhg"]
+[ext_resource type="Texture2D" uid="uid://rbajkxjaljwv" path="res://Assets/Textures/Doors/doorxn07.png" id="2_abccb"]
+[ext_resource type="AudioStream" uid="uid://qsqqpe7jr3o3" path="res://Assets/Sounds/SFX/DOROPN.WAV" id="2_eya37"]
 
 [sub_resource type="Animation" id="Animation_5si70"]
 length = 0.001
@@ -56,8 +56,8 @@ _data = {
 "open": SubResource("Animation_r1tl3")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drnfe"]
-albedo_texture = ExtResource("2_fvl5g")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83iye"]
+albedo_texture = ExtResource("2_abccb")
 
 [sub_resource type="BoxMesh" id="BoxMesh_japa2"]
 size = Vector3(0.1, 2, 2)
@@ -66,7 +66,7 @@ size = Vector3(0.1, 2, 2)
 size = Vector3(2, 2, 2)
 
 [node name="SimpleDoor" type="Node3D" groups=["Door", "player"]]
-script = ExtResource("1_eomb3")
+script = ExtResource("1_srmhg")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../SimpleDoor")
@@ -76,7 +76,7 @@ libraries = {
 
 [node name="SimpleDoor" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
-material_override = SubResource("StandardMaterial3D_drnfe")
+material_override = SubResource("StandardMaterial3D_83iye")
 use_collision = true
 collision_mask = 22
 mesh = SubResource("BoxMesh_japa2")
@@ -89,7 +89,7 @@ collision_mask = 22
 shape = SubResource("BoxShape3D_v8f7w")
 
 [node name="DoorSnd" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("3_3cjke")
+stream = ExtResource("2_eya37")
 
 [connection signal="area_entered" from="SimpleDoor/Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="SimpleDoor/Area3D" to="." method="_on_area_3d_area_exited"]
