@@ -114,6 +114,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
+east_face = 8
 south_face = 5
 west_face = 8
 top_face = 50
@@ -310,4 +311,4 @@ sprite_frames = SubResource("SpriteFrames_hy1lb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0543566, -8.94518)
 
 [node name="SimpleDoor1" parent="." instance=ExtResource("7_frdqi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.9727)
+transform = Transform3D(-8.17403e-08, 0, 1, 0, 2, 0, -1.87, 0, -4.37114e-08, -4, 0, 2.9727)

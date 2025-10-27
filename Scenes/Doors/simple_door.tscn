@@ -58,6 +58,7 @@ _data = {
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drnfe"]
 albedo_texture = ExtResource("2_fvl5g")
+uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_japa2"]
 size = Vector3(0.1, 2, 2)
