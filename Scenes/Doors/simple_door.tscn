@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://mmlwoat6jwgn"]
 
 [ext_resource type="Script" path="res://Scenes/Doors/simple_door.gd" id="1_eomb3"]
-[ext_resource type="Texture2D" uid="uid://bhwwuejw0fc3r" path="res://Assets/Textures/Doors/doorbig2.png" id="2_fvl5g"]
+[ext_resource type="Texture2D" uid="uid://dy6x0yspmohap" path="res://Assets/Textures/Doors/doorxn03.png" id="2_sepj6"]
 [ext_resource type="AudioStream" uid="uid://qsqqpe7jr3o3" path="res://Assets/Sounds/SFX/DOROPN.WAV" id="3_3cjke"]
 
 [sub_resource type="Animation" id="Animation_5si70"]
@@ -56,8 +56,9 @@ _data = {
 "open": SubResource("Animation_r1tl3")
 }
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drnfe"]
-albedo_texture = ExtResource("2_fvl5g")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5tgb"]
+resource_local_to_scene = true
+albedo_texture = ExtResource("2_sepj6")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_japa2"]
@@ -77,7 +78,7 @@ libraries = {
 
 [node name="SimpleDoor" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
-material_override = SubResource("StandardMaterial3D_drnfe")
+material_override = SubResource("StandardMaterial3D_j5tgb")
 use_collision = true
 collision_mask = 22
 mesh = SubResource("BoxMesh_japa2")
