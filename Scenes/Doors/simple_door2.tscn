@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://db1f6i6xjwckd"]
+[gd_scene load_steps=14 format=3 uid="uid://db1f6i6xjwckd"]
 
 [ext_resource type="Script" path="res://Scenes/Doors/simple_door.gd" id="1_mfer2"]
 [ext_resource type="Texture2D" uid="uid://cqckj87cjwbf2" path="res://Assets/Textures/Doors/doorbig0.png" id="2_vpqmk"]
-[ext_resource type="Texture2D" uid="uid://dy6x0yspmohap" path="res://Assets/Textures/Doors/doorxn03.png" id="3_t7bh8"]
 [ext_resource type="AudioStream" uid="uid://qsqqpe7jr3o3" path="res://Assets/Sounds/SFX/DOROPN.WAV" id="4_hph0c"]
+[ext_resource type="Texture2D" uid="uid://da0tp5x42ulq2" path="res://Assets/Textures/Doors/doorxn04.png" id="4_vw0q4"]
 
 [sub_resource type="Animation" id="Animation_5si70"]
 length = 0.001
@@ -63,13 +63,17 @@ roughness = 0.5
 uv1_scale = Vector3(3, 2, 3)
 texture_filter = 0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_260mk"]
-albedo_texture = ExtResource("3_t7bh8")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lnrna"]
+albedo_texture = ExtResource("4_vw0q4")
 uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_japa2"]
 resource_local_to_scene = true
 size = Vector3(0.1, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sws0t"]
+albedo_texture = ExtResource("4_vw0q4")
+uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v8f7w"]
 size = Vector3(2, 2, 2)
@@ -86,10 +90,11 @@ libraries = {
 [node name="SimpleDoor" type="CSGMesh3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
 material_override = SubResource("StandardMaterial3D_yubmf")
-material_overlay = SubResource("StandardMaterial3D_260mk")
+material_overlay = SubResource("StandardMaterial3D_lnrna")
 use_collision = true
 collision_mask = 22
 mesh = SubResource("BoxMesh_japa2")
+material = SubResource("StandardMaterial3D_sws0t")
 
 [node name="Area3D" type="Area3D" parent="SimpleDoor"]
 collision_layer = 32
