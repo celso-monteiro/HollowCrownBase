@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://pg0c8lfntd0k"]
+
+[ext_resource type="Texture2D" uid="uid://bbcy11tym20mq" path="res://Assets/Sprites/Misc/torch_low_res.png" id="1_2wisf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al1gu"]
+atlas = ExtResource("1_2wisf")
+region = Rect2(0, 0, 13, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykmcy"]
+atlas = ExtResource("1_2wisf")
+region = Rect2(13, 0, 13, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78tbs"]
+atlas = ExtResource("1_2wisf")
+region = Rect2(26, 0, 13, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hy1lb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_al1gu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykmcy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78tbs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Torch" type="AnimatedSprite3D"]
+transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, -0.952353, -1.35419)
+centered = false
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_hy1lb")
+autoplay = "default"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.661813, 0, 0, 0, 0.661813, 0.15922, 0.503968, 0.132763)
+light_color = Color(0.93, 0.837, 0.7905, 1)
+light_energy = 1.8
