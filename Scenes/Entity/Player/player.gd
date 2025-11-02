@@ -85,11 +85,11 @@ func _physics_process(_delta: float) -> void:
 	_update_automap()
 
 func _input(event: InputEvent) -> void:
-	#Quit / other UI
+	# Quit / other UI
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
-
 	# One-turn-per-press (kept simple)
+	
 	if event.is_action_pressed("left") or event.is_action_pressed("ui_left"):
 		_turn(90)
 	if event.is_action_pressed("right") or event.is_action_pressed("ui_right"):

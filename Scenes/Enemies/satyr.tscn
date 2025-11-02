@@ -1,0 +1,360 @@
+[gd_scene load_steps=32 format=3 uid="uid://dm68j1a80sbf6"]
+
+[ext_resource type="Script" path="res://Scenes/Enemies/enemy_AI.gd" id="1_0lmdv"]
+[ext_resource type="Texture2D" uid="uid://b2pwvq2ftqh33" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styre1.png" id="2_ka22c"]
+[ext_resource type="Texture2D" uid="uid://ds0gfwuiivegq" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrf1.png" id="3_giq73"]
+[ext_resource type="Texture2D" uid="uid://dq38bmyrp4u5c" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrg1.png" id="4_uu2db"]
+[ext_resource type="Texture2D" uid="uid://bvmyt4s46bsik" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrp1.png" id="5_7hpj0"]
+[ext_resource type="Texture2D" uid="uid://3aev53h22rgs" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrq1.png" id="6_ktha3"]
+[ext_resource type="Texture2D" uid="uid://b8vsjgbdidgba" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrr1.png" id="7_fmcu2"]
+[ext_resource type="Texture2D" uid="uid://c1wgqwqii1p0s" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrh1.png" id="8_57nky"]
+[ext_resource type="Texture2D" uid="uid://vhcn3skt0cov" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styri0.png" id="9_8d8hq"]
+[ext_resource type="Texture2D" uid="uid://cpl8g3iqphfwy" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrj0.png" id="10_rq26l"]
+[ext_resource type="Texture2D" uid="uid://bgey1iehs4x77" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrk0.png" id="11_xn0ht"]
+[ext_resource type="Texture2D" uid="uid://bo1v2h5sj530n" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrl0.png" id="12_1x8da"]
+[ext_resource type="Texture2D" uid="uid://cqfvt2ao8o35b" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrm0.png" id="13_fa43q"]
+[ext_resource type="Texture2D" uid="uid://facrlay4s5uc" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrn0.png" id="14_ekkef"]
+[ext_resource type="Texture2D" uid="uid://ckwdu7llmc81u" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styro0.png" id="15_pek4s"]
+[ext_resource type="Texture2D" uid="uid://c7v40j11c8ui4" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrb1.png" id="16_8camp"]
+[ext_resource type="Texture2D" uid="uid://bia73d4m2kwit" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styra1.png" id="17_vsu1i"]
+[ext_resource type="Texture2D" uid="uid://cdon8yvy3ayo2" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrc1.png" id="18_wr5b8"]
+[ext_resource type="Texture2D" uid="uid://dxpk885avljg8" path="res://Assets/Sprites/Enemies/Satyr/SPRITES/styrd1.png" id="19_5khr6"]
+[ext_resource type="AudioStream" uid="uid://ctybc3u0upyev" path="res://Assets/Sounds/Enemies/Satyr/MINDTH.WAV" id="20_43bvo"]
+[ext_resource type="AudioStream" uid="uid://c8ja3oijdkdso" path="res://Assets/Sounds/Enemies/Satyr/MINPAI.WAV" id="21_2dld3"]
+[ext_resource type="AudioStream" uid="uid://dk6t68av6t04v" path="res://Assets/Sounds/Enemies/Satyr/MINAT3.WAV" id="22_ordmk"]
+
+[sub_resource type="Animation" id="Animation_76hsl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"die"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ijrt7"]
+resource_name = "attack"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_ghp8l"]
+resource_name = "die"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"die"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_eeef6"]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_e001c"]
+resource_name = "pain"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"pain"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_5n48c"]
+resource_name = "walk"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite3D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite3D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5prp0"]
+_data = {
+"RESET": SubResource("Animation_76hsl"),
+"attack": SubResource("Animation_ijrt7"),
+"die": SubResource("Animation_ghp8l"),
+"idle": SubResource("Animation_eeef6"),
+"pain": SubResource("Animation_e001c"),
+"walk": SubResource("Animation_5n48c")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nc4bv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ka22c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_giq73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uu2db")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7hpj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ktha3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fmcu2")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_57nky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8d8hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rq26l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_xn0ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1x8da")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fa43q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ekkef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pek4s")
+}],
+"loop": false,
+"name": &"die",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_8camp")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_57nky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8d8hq")
+}],
+"loop": false,
+"name": &"pain",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_vsu1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8camp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wr5b8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_5khr6")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qd5p5"]
+size = Vector3(1, 2.18188, 1)
+
+[node name="Satyr" type="Node3D" groups=["Enemy"]]
+script = ExtResource("1_0lmdv")
+pain_chance = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5prp0")
+}
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.00988386, -0.00313014, 0)
+billboard = 2
+shaded = true
+alpha_cut = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_nc4bv")
+animation = &"die"
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 55
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0226806, 0)
+shape = SubResource("BoxShape3D_qd5p5")
+
+[node name="FrontRay" type="RayCast3D" parent="Area3D"]
+target_position = Vector3(0, 0, -2)
+collision_mask = 7
+collide_with_areas = true
+
+[node name="BackRay" type="RayCast3D" parent="Area3D"]
+target_position = Vector3(0, 0, 2)
+collision_mask = 7
+collide_with_areas = true
+
+[node name="RightRay" type="RayCast3D" parent="Area3D"]
+target_position = Vector3(2, 0, 0)
+collision_mask = 7
+collide_with_areas = true
+
+[node name="LeftRay" type="RayCast3D" parent="Area3D"]
+target_position = Vector3(-2, 0, 0)
+collision_mask = 7
+collide_with_areas = true
+
+[node name="Die_snd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_43bvo")
+
+[node name="Gibs_snd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_43bvo")
+
+[node name="Pain_snd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("21_2dld3")
+
+[node name="Attack_snd" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_ordmk")
+
+[node name="TurnTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="TurnTimer" to="." method="_on_turn_timer_timeout"]
