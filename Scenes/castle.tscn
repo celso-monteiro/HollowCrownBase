@@ -1,69 +1,25 @@
-[gd_scene load_steps=16 format=3 uid="uid://b723u2vmtq0rx"]
+[gd_scene load_steps=13 format=3 uid="uid://b723u2vmtq0rx"]
 
 [ext_resource type="Script" path="res://addons/level_block/level_block_node.gd" id="1_0hou2"]
 [ext_resource type="Texture2D" uid="uid://co7u1qyg1tmuo" path="res://Assets/Textures/texture.png" id="2_407ce"]
 [ext_resource type="PackedScene" uid="uid://dccdlxfv2uno6" path="res://Scenes/HUD/hud.tscn" id="3_7n01j"]
+[ext_resource type="PackedScene" uid="uid://db1f6i6xjwckd" path="res://Scenes/Doors/simple_door2.tscn" id="3_clmx1"]
 [ext_resource type="PackedScene" uid="uid://dih65pt1ku1vh" path="res://Scenes/Entity/Player/player.tscn" id="3_qtdh2"]
-[ext_resource type="Texture2D" uid="uid://dg1wyrnav3ba2" path="res://Assets/Sprites/Misc/Torch_128_Copy.png" id="4_v08ga"]
+[ext_resource type="PackedScene" uid="uid://dk85c7vi2xt8r" path="res://Scenes/Doors/simple_door3.tscn" id="4_rwrrm"]
+[ext_resource type="PackedScene" uid="uid://bcicqhru6iwgy" path="res://Scenes/Lights/torche.tscn" id="5_6h758"]
 [ext_resource type="PackedScene" uid="uid://mmlwoat6jwgn" path="res://Scenes/Doors/simple_door.tscn" id="6_h876u"]
+[ext_resource type="PackedScene" uid="uid://dm68j1a80sbf6" path="res://Scenes/Enemies/satyr.tscn" id="9_q7ib8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hgbr4"]
+albedo_texture = ExtResource("2_407ce")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kiai5"]
 albedo_texture = ExtResource("2_407ce")
 
 [sub_resource type="Environment" id="1"]
 background_mode = 1
 fog_depth_begin = 5.0
 fog_depth_end = 20.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yt0ur"]
-atlas = ExtResource("4_v08ga")
-region = Rect2(0, 0, 21, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tqhjl"]
-atlas = ExtResource("4_v08ga")
-region = Rect2(21, 0, 21, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xkkcc"]
-atlas = ExtResource("4_v08ga")
-region = Rect2(42, 0, 21, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g34v8"]
-atlas = ExtResource("4_v08ga")
-region = Rect2(63, 0, 21, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kjbdu"]
-atlas = ExtResource("4_v08ga")
-region = Rect2(84, 0, 21, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pu4eo"]
-atlas = ExtResource("4_v08ga")
-region = Rect2(105, 0, 21, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_hy1lb"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yt0ur")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tqhjl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xkkcc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g34v8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kjbdu")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pu4eo")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [node name="Levels" type="Node3D"]
 
@@ -85,6 +41,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
+north_face = 5
 top_face = 50
 bottom_face = 9
 
@@ -108,13 +65,63 @@ south_face = 5
 top_face = 50
 bottom_face = 9
 
+[node name="LevelBlock26" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 3)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock21" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock22" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock23" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock24" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -5)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
 [node name="LevelBlock14" type="Node3D" parent="Castle/Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
 east_face = 8
-south_face = 5
+south_face = 33
 west_face = 8
 top_face = 50
 bottom_face = 9
@@ -162,8 +169,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
-east_face = 5
-west_face = 5
 top_face = 50
 bottom_face = 9
 
@@ -172,8 +177,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
-east_face = 5
-west_face = 5
+east_face = 2
 top_face = 50
 bottom_face = 9
 
@@ -213,12 +217,22 @@ script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
 north_face = 5
-east_face = 4
+east_face = 5
 top_face = 50
 bottom_face = 9
 
 [node name="LevelBlock16" type="Node3D" parent="Castle/Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_kiai5")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock25" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -13)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
 texture_sheet = ExtResource("2_407ce")
@@ -227,7 +241,17 @@ south_face = 5
 top_face = 50
 bottom_face = 9
 
-[node name="LevelBlock18" type="Node3D" parent="Castle/Blocks"]
+[node name="LevelBlock28" type="Node3D" parent="Castle/Blocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -13)
+script = ExtResource("1_0hou2")
+material = SubResource("StandardMaterial3D_hgbr4")
+texture_sheet = ExtResource("2_407ce")
+north_face = 5
+south_face = 5
+top_face = 50
+bottom_face = 9
+
+[node name="LevelBlock27" type="Node3D" parent="Castle/Blocks"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -13)
 script = ExtResource("1_0hou2")
 material = SubResource("StandardMaterial3D_hgbr4")
@@ -258,56 +282,33 @@ west_face = 5
 top_face = 50
 bottom_face = 9
 
+[node name="SimpleDoor" parent="Castle/Blocks" instance=ExtResource("3_clmx1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 7)
+
+[node name="SimpleDoor2" parent="Castle/Blocks" instance=ExtResource("4_rwrrm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Castle"]
 environment = SubResource("1")
 
 [node name="Player" parent="Castle" instance=ExtResource("3_qtdh2")]
 transform = Transform3D(0.472514, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
 
-[node name="Torch" type="AnimatedSprite3D" parent="Castle"]
-transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, -0.952353, -1.35419)
-centered = false
-billboard = 1
-sprite_frames = SubResource("SpriteFrames_hy1lb")
-autoplay = "default"
-frame_progress = 0.293118
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Castle/Torch"]
-transform = Transform3D(0.5, 0, 0, 0, 0.661813, 0, 0, 0, 0.661813, 0.15922, 0.503968, 0.132763)
-light_color = Color(0.93, 0.837, 0.7905, 1)
-light_energy = 1.8
-
-[node name="Torch3" type="AnimatedSprite3D" parent="Castle"]
-transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -1.09389, -0.755612, 2.93119)
-centered = false
-billboard = 1
-sprite_frames = SubResource("SpriteFrames_hy1lb")
-autoplay = "default"
-frame_progress = 0.293118
-
-[node name="OmniLight3D" type="OmniLight3D" parent="Castle/Torch3"]
-transform = Transform3D(0.5, 0, 0, 0, 0.661813, 0, 0, 0, 0.661813, 0.15922, 0.503968, 0.132763)
-light_color = Color(0.93, 0.837, 0.7905, 1)
-light_energy = 1.8
-
-[node name="Torch2" type="AnimatedSprite3D" parent="Castle"]
-transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, 2.78933, 0.006, -4.11638)
-centered = false
-billboard = 1
-shaded = true
-sprite_frames = SubResource("SpriteFrames_hy1lb")
-
-[node name="Torch4" type="AnimatedSprite3D" parent="Castle"]
-transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, 2.71103, 0.006, -9.47727)
-centered = false
-billboard = 1
-shaded = true
-sprite_frames = SubResource("SpriteFrames_hy1lb")
-
 [node name="HUD" parent="Castle" instance=ExtResource("3_7n01j")]
 
-[node name="SimpleDoor" parent="." instance=ExtResource("6_h876u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0543566, -8.94518)
+[node name="Lights" type="Node3D" parent="Castle"]
 
-[node name="SimpleDoor2" parent="." instance=ExtResource("6_h876u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0543566, 7.05482)
+[node name="Torch" parent="Castle/Lights" instance=ExtResource("5_6h758")]
+transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, 0.047647, -1.35419)
+
+[node name="Torch2" parent="Castle/Lights" instance=ExtResource("5_6h758")]
+transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, 0.047647, -5.35419)
+
+[node name="Torch3" parent="Castle/Lights" instance=ExtResource("5_6h758")]
+transform = Transform3D(2, 0, 0, 0, 1.511, 0, 0, 0, 1.511, -0.0938911, 0.047647, -13.3542)
+
+[node name="SimpleDoor" parent="Castle" instance=ExtResource("6_h876u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.91071, -0.0557139, -9)
+
+[node name="Satyr" parent="Castle" instance=ExtResource("9_q7ib8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -13)
