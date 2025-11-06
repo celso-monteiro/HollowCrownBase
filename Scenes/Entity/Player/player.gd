@@ -85,8 +85,13 @@ func _physics_process(_delta: float) -> void:
 	_update_automap()
 
 func _input(event: InputEvent) -> void:
-	# Quit / other UI
+	if event.is_action_pressed("pause"):
+		get_tree().paused
+		print(get_tree().paused )
+				
+	# Quit / other UI fix this
 	if event.is_action_pressed("ui_cancel"):
+		print("Esc pressed")
 		get_tree().quit()
 	# One-turn-per-press (kept simple)
 	
@@ -94,8 +99,6 @@ func _input(event: InputEvent) -> void:
 		_turn(90)
 	if event.is_action_pressed("right") or event.is_action_pressed("ui_right"):
 		_turn(-90)
-	#if event.is_action_pressed("map"):
-		#print("Map request")
 	
 	if event.is_action_pressed("map"):
 		MapService.toggle_full_map()
