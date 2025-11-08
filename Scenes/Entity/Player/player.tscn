@@ -39,7 +39,7 @@ _data = {
 "headbob": SubResource("2")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1")
 
 [node name="FrontRay" type="RayCast3D" parent="."]
